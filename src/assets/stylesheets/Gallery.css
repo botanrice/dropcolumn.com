@@ -4,5 +4,12 @@
 }
 
 .gallery {
-    background-color: lightgray;
+    display: inline-block;
+}
+
+.galleryImage {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    display: inline-block;
 }
