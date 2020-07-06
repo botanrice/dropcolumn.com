@@ -1,4 +1,22 @@
+.about {
+    text-align: unset;
+    font-family: monospace;
+    height: 100vh;
+    padding-top: 1vh;
+}
+
 .about-body {
     text-align: unset;
     font-family: monospace;
+    padding: 5vw;
+    padding-top: 7vw;
+    font-size: 16px;
+}
+
+.aboutImage {
+    padding: 20px 20px 20px 20px;
+    margin: 5px 0;
+    display: inline-block;
+    width: 75px;
+    height: auto;
 }

@@ -1,15 +1,26 @@
+.gallery {
+    text-align: unset;
+    font-family: monospace;
+    height: 100vh;
+    padding-top: 1vh;
+}
+
+/* @media screen and (max-width: 992px) {
+    .gallery h3 {
+        font-size: 1.5rem;
+    }
+} */
+
 .gallery-body {
     text-align: unset;
     font-family: monospace;
-}
-
-.gallery {
-    display: inline-block;
+    padding: 5vw;
+    padding-top: 7vw;
 }
 
 .galleryImage {
-    width: 200px;
-    height: 200px;
     padding: 20px;
+    margin: 5px 0;
     display: inline-block;
+    border: solid black 1px;
 }

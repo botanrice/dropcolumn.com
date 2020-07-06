@@ -6,25 +6,39 @@ import Image from 'react-bootstrap/Image'
 import './assets/stylesheets/Gallery.css';
 import LMBlack from './assets/LM_black.png';
 
+function importAll(r) {
+  let images = {};
+  r.keys().map((item, index) => ( images[item.replace('./', '')] = r(item) ));
+  return images;
+}
+
+const images = importAll(require.context('./assets/images', false, /\.(png|jpe?g|JPG)$/));
 
 export default class Gallery extends React.Component {
 
   render() {
     return (
-      <Container className="gallery-body" fluid>
-          <h1>Gallery</h1>
+      <div className="gallery">
+        <h3>gallery</h3>
+        <Container className="gallery-body" fluid>
         <Row>
-          <Col md={4}>
-            <Image src={LMBlack} fluid className="galleryImage" />
+          <Col md={6}>
+            <Image src={images['DSC_0104.jpeg']} fluid className="galleryImage" />
           </Col>
-          <Col md={4}>
-            <Image src={LMBlack} fluid className="galleryImage" />
-          </Col>
-          <Col md={4}>
-            <Image src={LMBlack} fluid className="galleryImage" />
+          <Col md={6}>
+            <Image src={images['DSC_0614.JPG']} fluid className="galleryImage" />
           </Col>
         </Row>
-      </Container>
+        <Row>
+          <Col md={6}>
+            <Image src={images['DSC_0996.JPG']} fluid className="galleryImage" />
+          </Col>
+          <Col md={6}>
+            <Image src={images['DSC_0972.JPG']} fluid className="galleryImage" />
+          </Col>
+        </Row>
+        </Container>
+      </div>
     );
   }
 }

@@ -5,6 +5,9 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import { FaSoundcloud, FaSpotify, FaApple, FaInstagram, FaFacebookSquare, FaFacebookF, FaTwitter, FaYoutube, FaBars } from 'react-icons/fa';
 import Sidebar from 'react-sidebar';
 import SideNav from './SideNav';
@@ -67,12 +70,12 @@ export default class HomeRouter extends React.Component {
         sidebarOpen: false
     }
 
-    this.toggleSideNav = this.toggleSideNav.bind(this);
+    this.closeSidebar = this.closeSidebar.bind(this);
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
   }
 
-  toggleSideNav() {
-      this.setState({sideNavOn: !this.state.sideNavOn});
+  closeSidebar() {
+      this.setState({sidebarOpen: false});
   }
 
   onSetSidebarOpen(open) {
@@ -82,10 +85,10 @@ export default class HomeRouter extends React.Component {
   render() {
     return(
     <Router>
-      <div className="Home">
+      <Container className="Home">
         <div className="App-body">
           <Sidebar
-            sidebar={<SideNav routes={routes}/>}
+            sidebar={<SideNav routes={routes} onLinkClick={this.closeSidebar}/>}
             open={this.state.sidebarOpen}
             onSetOpen={this.onSetSidebarOpen}
             styles={sidebarStyles}
@@ -112,7 +115,7 @@ export default class HomeRouter extends React.Component {
         <footer className="App-footer">
             <span>Drop Column Worldwide | Est. 2020</span>
           </footer>
-      </div>
+      </Container>
     </Router>
     );
   }

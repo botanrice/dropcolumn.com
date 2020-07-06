@@ -20,13 +20,13 @@ export default class SideNav extends React.Component {
       <div className="styledSideNav">
         <ul className="sidebarLinks">
           <li>
-            <Link to="/">home</Link>
+            <Link to="/" onClick={this.props.onLinkClick}>home</Link>
           </li>
           <li>
-            <Link to="/gallery">gallery</Link>
+            <Link to="/gallery" onClick={this.props.onLinkClick}>gallery</Link>
           </li>
           <li>
-            <Link to="/about">about</Link>
+            <Link to="/about" onClick={this.props.onLinkClick}>about</Link>
           </li>
         </ul>
 
