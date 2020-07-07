@@ -8,13 +8,14 @@ import {
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Navbar from 'react-bootstrap/Navbar';
 import { FaSoundcloud, FaSpotify, FaApple, FaInstagram, FaFacebookSquare, FaFacebookF, FaTwitter, FaYoutube, FaBars } from 'react-icons/fa';
 import Sidebar from 'react-sidebar';
 import SideNav from './SideNav';
 import Gallery from './Gallery';
 import About from './About';
 import Home from './Home';
-import logo from './assets/LM_black.png';
+import Stoic from './Stoic';
 import './Home.css';
 
 
@@ -40,6 +41,10 @@ const routes = [
   {
     path: "/about",
     main: () => <About />
+  },
+  {
+    path: "/stoic",
+    main: () => <Stoic />
   }
 ];
 
@@ -113,8 +118,10 @@ export default class HomeRouter extends React.Component {
           </div>
         </div>
         <footer className="App-footer">
+          <Navbar fixed='bottom' className="stickyFooter">
             <span>Drop Column Worldwide | Est. 2020</span>
-          </footer>
+          </Navbar>
+        </footer>
       </Container>
     </Router>
     );

@@ -34,6 +34,13 @@
   font-family: monospace;
 }
 
+.stickyFooter {
+  text-align: center;
+  display: block;
+  background: white;
+  opacity: 95%;
+}
+
 .socialButton {
   background-color: white;
   color: black;
