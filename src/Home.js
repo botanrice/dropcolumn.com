@@ -48,7 +48,7 @@ export default class Home extends React.Component {
               rel="noopener noreferrer" target="_blank"><FaSpotify /></a>
             <a href="https://www.instagram.com/stoicandjones/" id="instagramBtn" className="socialButton" 
               type="button" rel="noopener noreferrer" target="_blank"><FaInstagram /></a>
-            <a href="https://www.youtube.com/channel/UCUIK-w8iuaRHMsuP6iTB2Wg?view_as=subscriber" id="youtubeBtn"
+            <a href="https://youtu.be/Mj041pftyvQ" id="youtubeBtn"
               className="socialButton" type="button" rel="noopener noreferrer" target="_blank"><FaYoutube /></a>
           </div>
         </div>
