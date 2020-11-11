@@ -23,18 +23,18 @@ export default class Gallery extends React.Component {
         <Container className="gallery-body" fluid>
         <Row>
           <Col md={6}>
-            <Image src={images['DSC_0104.jpeg']} fluid className="galleryImage" />
+            <Image src={images['DSC_0614.JPG']} fluid className="galleryImage" />
           </Col>
           <Col md={6}>
-            <Image src={images['DSC_0614.JPG']} fluid className="galleryImage" />
+            <Image src={images['DSC_0972.JPG']} fluid className="galleryImage" />
           </Col>
         </Row>
         <Row>
           <Col md={6}>
-            <Image src={images['DSC_0996.JPG']} fluid className="galleryImage" />
+            <Image src={images['DSC_0104.jpeg']} fluid className="galleryImage" />
           </Col>
           <Col md={6}>
-            <Image src={images['DSC_0972.JPG']} fluid className="galleryImage" />
+            <Image src={images['DSC_0996.JPG']} fluid className="galleryImage" />
           </Col>
         </Row>
         </Container>
