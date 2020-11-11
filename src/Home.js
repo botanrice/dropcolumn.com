@@ -1,15 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import { FaSoundcloud, FaSpotify, FaApple, FaInstagram, FaFacebookSquare, FaFacebookF, FaTwitter, FaYoutube, FaBars } from 'react-icons/fa';
-import Sidebar from 'react-sidebar';
-import SideNav from './SideNav';
-import Gallery from './Gallery';
-import About from './About';
+import { FaSoundcloud, FaSpotify, FaApple, FaInstagram, FaYoutube } from 'react-icons/fa';
 import logo from './assets/LM_black.png';
 import './Home.css';
 

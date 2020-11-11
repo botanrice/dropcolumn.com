@@ -102,7 +102,7 @@ export default class HomeRouter extends React.Component {
             <span id={this.state.sidebarOpen ? "nav-btn-open" : "nav-btn"} className="navButton" onClick={() => this.onSetSidebarOpen(!this.state.sidebarOpen)}><FaBars /></span>
           </Sidebar>
 
-          <div style={{ flex: 1 }}>
+          <div className="Home-body">
             <Switch>
               {routes.map((route, index) => (
                 // Render more <Route>s with the same paths as

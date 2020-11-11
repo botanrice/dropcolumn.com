@@ -49,6 +49,12 @@
   padding: 15px 18px;
   font-size: 1.25em;
   cursor: pointer;
+  appearance: unset;
+}
+
+.Home-body {
+  flex: 1;
+  z-index: 1;
 }
 
 /* Nav & Sidebar CSS */
