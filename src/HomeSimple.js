@@ -11,7 +11,7 @@ import SideNav from './SideNav';
 import Gallery from './Gallery';
 import About from './About';
 import logo from './assets/LM_black.png';
-import './Home.css';
+import './assets/stylesheets/Home.css';
 
 
 const routes = [

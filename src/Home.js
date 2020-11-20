@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaSoundcloud, FaSpotify, FaApple, FaInstagram, FaYoutube } from 'react-icons/fa';
 import logo from './assets/LM_black.png';
-import './Home.css';
+import './assets/stylesheets/Home.css';
 
 
 export default class Home extends React.Component {
@@ -38,7 +38,7 @@ export default class Home extends React.Component {
               rel="noopener noreferrer" target="_blank"><FaSpotify /></a>
             <a href="https://www.instagram.com/stoicandjones/" id="instagramBtn" className="socialButton" 
               type="button" rel="noopener noreferrer" target="_blank"><FaInstagram /></a>
-            <a href="https://youtu.be/Mj041pftyvQ" id="youtubeBtn"
+            <a href="https://youtu.be/rohE79OvKwg" id="youtubeBtn"
               className="socialButton" type="button" rel="noopener noreferrer" target="_blank"><FaYoutube /></a>
           </div>
         </div>

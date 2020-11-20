@@ -15,8 +15,8 @@ import SideNav from './SideNav';
 import Gallery from './Gallery';
 import About from './About';
 import Home from './Home';
-import Stoic from './Stoic';
-import './Home.css';
+import Stoic from './profiles/Stoic';
+import './assets/stylesheets/Home.css';
 
 
 // Each logical "route" has two components, one for

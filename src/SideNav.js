@@ -8,7 +8,7 @@ import {
 import Gallery from './Gallery';
 import About from './About';
 import Home from './HomeSimple';
-import './Home.css';
+import './assets/stylesheets/Home.css';
 
 
 export default class SideNav extends React.Component {
