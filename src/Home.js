@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaSoundcloud, FaSpotify, FaApple, FaInstagram, FaYoutube } from 'react-icons/fa';
 import logo from './assets/LM_black.png';
+import droplet from './assets/images/LM_droplet_circle.png';
+import column from './assets/images/LM_droplet_column.png';
 import './assets/stylesheets/Home.css';
 
 
@@ -27,6 +29,7 @@ export default class Home extends React.Component {
 
   render() {
     return (
+      <div>
         <div className="main-body">
           <img src={logo} className="logo" alt="logo" /> 
           <div className="icons">
@@ -42,6 +45,11 @@ export default class Home extends React.Component {
               className="socialButton" type="button" rel="noopener noreferrer" target="_blank"><FaYoutube /></a>
           </div>
         </div>
+        <div className="profileIconButtons">
+          <a href="https://soundcloud.com/jones_avenue"><img src={droplet} className="homeProfileButton" alt="dropletButton"/></a>
+          <a href="https://soundcloud.com/stoicdamc"><img src={column} className="homeProfileButton" alt="columnButton"/></a>
+        </div>
+      </div>
     );
   }
 }
