@@ -44,15 +44,6 @@
     border: solid black 1px;
 }
 
-.musicRow {
-    text-align: center;
-    display: block;
-}
-
-.bioRow {
-    text-align: center;
-}
-
 .linkRow {
     text-align: center;
     display: block;
@@ -61,6 +52,7 @@
 
 .profileRow {
     height: 80vh;
+    max-height: 80vh;
 }
 
 /* Logo */
