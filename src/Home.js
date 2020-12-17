@@ -45,9 +45,11 @@ export default class Home extends React.Component {
               className="socialButton" type="button" rel="noopener noreferrer" target="_blank"><FaYoutube /></a>
           </div>
         </div>
+        <div>
+          <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:1iSnXRVWAUPaPgDYZXjNc7&size=detail&theme=light" 
+            width="300" height="56" scrolling="no" frameBorder="0" id="spotifyFollowBtn" allowtransparency="true"></iframe>
+        </div>
         <div className="profileIconButtons">
-          <a href="https://soundcloud.com/jones_avenue"><img src={droplet} className="homeProfileButton" alt="dropletButton"/></a>
-          <a href="https://soundcloud.com/stoicdamc"><img src={column} className="homeProfileButton" alt="columnButton"/></a>
         </div>
       </div>
     );

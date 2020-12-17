@@ -16,6 +16,8 @@ import Gallery from './Gallery';
 import About from './About';
 import Home from './Home';
 import Stoic from './profiles/Stoic';
+import droplet from './assets/images/LM_droplet_circle.png';
+import column from './assets/images/LM_droplet_column.png';
 import './assets/stylesheets/Home.css';
 
 
@@ -119,7 +121,13 @@ export default class HomeRouter extends React.Component {
         </div>
         <footer className="App-footer">
           <Navbar fixed='bottom' className="stickyFooter">
-            <span>Drop Column Worldwide | Est. 2020</span>
+            <div>
+            <a href="https://soundcloud.com/jones_avenue"><img src={droplet} className="homeProfileButton" alt="dropletButton"/></a>
+            <a href="https://soundcloud.com/stoicdamc"><img src={column} className="homeProfileButton" alt="columnButton"/></a>
+            </div>
+            <div>
+              <span>Drop Column Worldwide | Est. 2020</span>
+            </div>
           </Navbar>
         </footer>
       </Container>
