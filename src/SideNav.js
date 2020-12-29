@@ -29,7 +29,7 @@ export default class SideNav extends React.Component {
             <Link to="/about" onClick={this.props.onLinkClick}>about</Link>
           </li>
           <li>
-            <Link to="/dropcolumn" onClick={this.props.onLinkClick}>DROP//COLUMN</Link>
+            <Link to="/drop-column" onClick={this.props.onLinkClick}>DROP//COLUMN</Link>
           </li>
         </ul>
 

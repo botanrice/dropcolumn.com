@@ -50,7 +50,7 @@ const routes = [
     main: () => <Stoic />
   },
   {
-    path: "/dropcolumn",
+    path: "/drop-column",
     main: () => <DropColumnEP />
   }
 ];
@@ -95,7 +95,7 @@ export default class HomeRouter extends React.Component {
   }
 
   render() {
-    let isDark = (window.location.href.includes('/dropcolumn') ? true : false);
+    let isDark = (window.location.href.includes('/drop-column') ? true : false);
     console.log(isDark);
 
     return(
