@@ -33,24 +33,24 @@ import './assets/stylesheets/Home.css';
 // order they would appear in a <Switch>.
 const routes = [
   {
-    path: process.env.PUBLIC_URL + "/",
+    path: "/",
     exact: true,
     main: () => <Home />
   },
   {
-    path: process.env.PUBLIC_URL + "/gallery",
+    path: "/gallery",
     main: () => <Gallery />
   },
   {
-    path: process.env.PUBLIC_URL + "/about",
+    path: "/about",
     main: () => <About />
   },
   {
-    path: process.env.PUBLIC_URL + "/stoic",
+    path: "/stoic",
     main: () => <Stoic />
   },
   {
-    path: process.env.PUBLIC_URL + "/drop-column",
+    path: "/drop-column",
     main: () => <DropColumnEP />
   }
 ];
@@ -120,7 +120,7 @@ export default class HomeRouter extends React.Component {
                   // above, but different components this time.
                   <Route
                     key={index}
-                    path={route.path}
+                    path={process.env.PUBLIC_URL + route.path}
                     exact={route.exact}
                     children={<route.main />}
                   />
