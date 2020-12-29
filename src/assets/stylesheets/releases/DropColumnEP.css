@@ -1,0 +1,145 @@
+.dropcolumnEP {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    padding-top: 50px;
+    padding-bottom: 150px;
+}
+
+.releaseHeader {
+    padding: 0;
+}
+
+.releaseInfo {
+    text-align: left;
+}
+
+#releaseTitle {
+    font-size: 5vmin;
+    margin-bottom: 0;
+}
+
+#releaseBio {
+    font-size: 12px;
+}
+
+.streamIcons {
+    display: inline-block;
+}
+
+.streamButton {
+    color: white;
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    appearance: unset;
+}
+
+/* Rank Desc. */
+
+#rankDesc {
+    margin: 20px 0 0 0;
+    text-align: center;
+    display: block;
+    font-size: 3vmin;
+}
+
+#rankHdr {
+    font-size: 1.25em;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.epBody {
+    margin: 0;
+}
+
+#coverArtDCEP {
+    /* padding: 20px 20px 20px 20px; */
+    margin: 5px 0;
+    display: inline-block;
+    width: 6em;
+    height: auto;
+    background-color: white;
+    border: solid 2px white;
+}
+
+
+/* DragDrop */
+.droppableId {
+    margin: 25px 0;
+}
+
+/* Stream */
+.postRank {
+    margin: 25px 0;
+}
+
+.postRankVideo {
+    border: solid 5px lavenderblush;
+    margin: 20px 0; 
+}
+
+
+
+/** MEDIA QUERIES *************************************************/
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    .releaseInfo {
+        text-align: left;
+    }
+
+
+    #rankDesc {
+        margin: 20px 0 0 0;
+        text-align: center;
+        display: block;
+        font-size: 3vmin;
+    }
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .releaseInfo {
+        text-align: left;
+    }
+
+    #rankDesc {
+        margin: 20px 0 0 0;
+        text-align: center;
+        display: block;
+        font-size: 1rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .releaseInfo {
+        text-align: left;
+    }
+    
+    #rankDesc {
+        margin: 20px 0 0 0;
+        text-align: center;
+        display: block;
+        font-size: 1rem;
+    }
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .releaseInfo {
+        text-align: left;
+    }
+
+    #rankDesc {
+        margin: 20px 0 0 0;
+        text-align: center;
+        display: block;
+        font-size: 1rem;
+    }
+ }

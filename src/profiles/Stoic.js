@@ -37,9 +37,10 @@ const stoicDCWW = (
  *  - ImageCard is 3
  */
 const profileCards = [
-  {"cardType": 1, "bio": {"text": "yo! I'm stoic"}},
-  {"cardType": 3, "title": "Co-founder: lawyer malloy", "image": lmBlk},
+  {"cardType": 1, "bio": {"text": "yo! I'm stoic."}},
+  {"cardType": 1, "bio": {"text": "MORE →"}},
   {"cardType": 3, "title": "Founder: Drop Column Worldwide", "image": dcwwBlk},
+  {"cardType": 3, "title": "half of lawyer malloy", "image": lmBlk},
 ]
 
 export default class Stoic extends React.Component {
@@ -76,20 +77,18 @@ export default class Stoic extends React.Component {
                 className="socialButton" type="button" rel="noopener noreferrer" target="_blank"><FaYoutube /></a>
             </Col>
           </Row>
-          <Row className="profileRow">
-            <Col md={6}>
-              <ProfileCard type={1} content={profileCards[0]}/>
+          <Row xs="1" sm="2" md="2" className="profileRow" id="bottomProfileRow">
+            <Col className="profileCol">
+              <ProfileCard type={profileCards[0].cardType} content={profileCards[0].bio}/>
             </Col>
-            <Col md={6}>
-              <ProfileCard type={1} content={"More!"}/>
+            <Col className="profileCol">
+              <ProfileCard type={profileCards[1].cardType} content={profileCards[1].bio}/>
             </Col>
-          </Row>
-          <Row className="profileRow">
-            <Col md={6}>
-              <ProfileCard type={3} content={profileCards[1]}/>
+            <Col className="profileCol">
+              <ProfileCard type={profileCards[2].cardType} content={profileCards[2]}/>
             </Col>
-            <Col md={6}>
-              <ProfileCard type={3} content={profileCards[2]}/>
+            <Col className="profileCol">
+              <ProfileCard type={profileCards[3].cardType} content={profileCards[3]}/>
             </Col>
           </Row>
           <Row>

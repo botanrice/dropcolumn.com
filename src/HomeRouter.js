@@ -16,6 +16,7 @@ import Gallery from './Gallery';
 import About from './About';
 import Home from './Home';
 import Stoic from './profiles/Stoic';
+import DropColumnEP from './releases/DropColumnEP';
 import droplet from './assets/images/LM_droplet_circle.png';
 import column from './assets/images/LM_droplet_column.png';
 import './assets/stylesheets/Home.css';
@@ -47,6 +48,10 @@ const routes = [
   {
     path: "/stoic",
     main: () => <Stoic />
+  },
+  {
+    path: "/dropcolumn",
+    main: () => <DropColumnEP />
   }
 ];
 
@@ -90,48 +95,52 @@ export default class HomeRouter extends React.Component {
   }
 
   render() {
-    return(
-    <Router>
-      <Container className="Home">
-        <div className="App-body">
-          <Sidebar
-            sidebar={<SideNav routes={routes} onLinkClick={this.closeSidebar}/>}
-            open={this.state.sidebarOpen}
-            onSetOpen={this.onSetSidebarOpen}
-            styles={sidebarStyles}
-            shadow={false}
-          > 
-            <span id={this.state.sidebarOpen ? "nav-btn-open" : "nav-btn"} className="navButton" onClick={() => this.onSetSidebarOpen(!this.state.sidebarOpen)}><FaBars /></span>
-          </Sidebar>
+    let isDark = (window.location.href.includes('/dropcolumn') ? true : false);
+    console.log(isDark);
 
-          <div className="Home-body">
-            <Switch>
-              {routes.map((route, index) => (
-                // Render more <Route>s with the same paths as
-                // above, but different components this time.
-                <Route
-                  key={index}
-                  path={route.path}
-                  exact={route.exact}
-                  children={<route.main />}
-                />
-              ))}
-            </Switch>
-          </div>
+    return(
+      <Router>
+        <div className={isDark ? "Home-dark" : "Home"}>
+          <Container className="App-body">
+            <Sidebar
+              sidebar={<SideNav routes={routes} onLinkClick={this.closeSidebar}/>}
+              open={this.state.sidebarOpen}
+              onSetOpen={this.onSetSidebarOpen}
+              styles={sidebarStyles}
+              shadow={false}
+            > 
+              <span id={this.state.sidebarOpen ? "nav-btn-open" : "nav-btn"} className={isDark && !this.state.sidebarOpen ? "navButton navBtnInverted" : "navButton"} 
+                onClick={() => this.onSetSidebarOpen(!this.state.sidebarOpen)}><FaBars /></span>
+            </Sidebar>
+
+            <div className="Home-body">
+              <Switch>
+                {routes.map((route, index) => (
+                  // Render more <Route>s with the same paths as
+                  // above, but different components this time.
+                  <Route
+                    key={index}
+                    path={route.path}
+                    exact={route.exact}
+                    children={<route.main />}
+                  />
+                ))}
+              </Switch>
+            </div>
+          </Container>
+          <footer className="App-footer">
+            <Navbar fixed='bottom' className="stickyFooter">
+              <div style={{"display": isDark ? "none" : ""}}>
+                <a href="https://soundcloud.com/jones_avenue"><img src={droplet} className="homeProfileButton" alt="dropletButton"/></a>
+                <a href="https://soundcloud.com/stoicdamc"><img src={column} className="homeProfileButton" alt="columnButton"/></a>
+              </div>
+              <div>
+                <span>Drop Column Worldwide | Est. 2020</span>
+              </div>
+            </Navbar>
+          </footer>
         </div>
-        <footer className="App-footer">
-          <Navbar fixed='bottom' className="stickyFooter">
-            <div>
-            <a href="https://soundcloud.com/jones_avenue"><img src={droplet} className="homeProfileButton" alt="dropletButton"/></a>
-            <a href="https://soundcloud.com/stoicdamc"><img src={column} className="homeProfileButton" alt="columnButton"/></a>
-            </div>
-            <div>
-              <span>Drop Column Worldwide | Est. 2020</span>
-            </div>
-          </Navbar>
-        </footer>
-      </Container>
-    </Router>
+      </Router>
     );
   }
 }

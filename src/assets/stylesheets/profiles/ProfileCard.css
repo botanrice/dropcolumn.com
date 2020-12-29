@@ -1,13 +1,15 @@
 .profileCard {
+    min-height: 350px;
     background-color: lightgray;
     margin: 10px 0;
     /* padding: 10%; */
-    height: 90%;
+    /* height: 90%; */
 }
 
 .bioCard { 
-    height: 100%;
-    background-color: lightskyblue;
+    min-height: 350px;
+    padding: 150px 0;
+    background-color: white;
 }
 
 .embedCard {
@@ -20,14 +22,16 @@
 }
 
 .imageCardTitle {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     margin: 0;
 }
 
 .imageCardImage { 
-    position: relative;
+    opacity: 0.5;
+    /* position: relative;
     height: 90%;
     padding: 10px;
+    object-fit: fill; */
 }
 
 

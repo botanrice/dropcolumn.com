@@ -9,7 +9,7 @@ import '../../assets/stylesheets/profiles/ProfileCard.css';
 function BioCard(props) {
   return(
     <div className="bioCard">
-      Yo! I'm stoic.
+      <CardText>{props.content.text}</CardText>
     </div>
   );
 }
@@ -26,7 +26,7 @@ function ImageCard(props) {
   return(
     <div className="imageCard">
       <CardTitle className="imageCardTitle">{props.title}</CardTitle>
-      <CardImg className="imageCardImage" top width="100%" src={props.image} alt="Drop Column Worldwide"/>
+      <CardImg className="imageCardImage" bottom width="100%" src={props.image} alt="Drop Column Worldwide"/>
     </div>
   );
 }
