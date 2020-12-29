@@ -95,40 +95,45 @@ export default class DropColumnEP extends React.Component {
         </Row>
         <Row id="rankDesc" style={{"display": (this.state.submitted ? "none" : "")}}>
           <p id="rankHdr">INSTRUCTIONS</p>
-          <p>listen to the entirety of DROP//COLUMN. <br/> rank your favorite DROP//COLUMN tracks. <br/> press submit at the bottom of the page.</p>
+          <p>listen to the entirety of DROP//COLUMN. <br/> drag & drop to rank your favorite tracks. <br/> press submit at the bottom of the page.</p>
           <div className="dragInstrDiv">
             <p className="dragInstruction">drag & drop</p>
             <p className="dragInstruction">drag & drop</p>
             <p className="dragInstruction">drag & drop</p>
           </div>
         </Row>
-        <Row className="epBody"> 
-          <Col xs="2" className="releaseHeader">
-            {nums.map((num) => 
-              <div className="rankNumber">{num}</div>
-            )}
-          </Col>
-          <Col xs="10" className="releaseHeader">
-            { !this.state.submitted 
-              ? 
+        
+        { !this.state.submitted 
+          ? 
+          <Row className="epBody"> 
+            <Col xs="2" className="releaseHeader">
+              {nums.map((num) => 
+                <div className="rankNumber">{num}</div>
+              )}
+            </Col>
+            <Col xs="10" className="releaseHeader">
               <DragDrop 
                     items={this.state.items} 
                     onDragEnd={(e) => this.onDragEnd(e)}
                     submitRanking={() => this.submitRanking()}/>
-              :
-              <div className="postRank">
-                <span>thanks for voting. results will be released soon.</span>
-                <ReactPlayer
-                  url={"https://youtu.be/rohE79OvKwg"}
-                  width="auto"
-                  height="15em"
-                  controls="true"
-                  className="postRankVideo"
-                />
-              </div>
-            }
-          </Col>
-        </Row>
+            </Col>
+          </Row>
+          :
+          <Row>
+            <Col>
+                <div className="postRank">
+                  <span>thanks for voting. results will be released soon.</span>
+                  <ReactPlayer
+                    url={"https://youtu.be/rohE79OvKwg"}
+                    width="auto"
+                    height="15em"
+                    controls="true"
+                    className="postRankVideo"
+                  />
+                </div>
+            </Col>
+          </Row>
+          }
       </Container>
     );
   }
