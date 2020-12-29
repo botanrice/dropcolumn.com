@@ -70,6 +70,8 @@ export default class DropColumnEP extends React.Component {
   };
 
   render() {
+    let nums = ["1.", "2.", "3.", "4.", "5.", "6."];
+
     return (
       <Container className="dropcolumnEP">
         <Row>
@@ -94,9 +96,19 @@ export default class DropColumnEP extends React.Component {
         <Row id="rankDesc" style={{"display": (this.state.submitted ? "none" : "")}}>
           <p id="rankHdr">INSTRUCTIONS</p>
           <p>listen to the entirety of DROP//COLUMN. <br/> rank your favorite DROP//COLUMN tracks. <br/> press submit at the bottom of the page.</p>
+          <div className="dragInstrDiv">
+            <p className="dragInstruction">drag & drop</p>
+            <p className="dragInstruction">drag & drop</p>
+            <p className="dragInstruction">drag & drop</p>
+          </div>
         </Row>
         <Row className="epBody"> 
-          <Col>
+          <Col xs="2" className="releaseHeader">
+            {nums.map((num) => 
+              <div className="rankNumber">{num}</div>
+            )}
+          </Col>
+          <Col xs="10" className="releaseHeader">
             { !this.state.submitted 
               ? 
               <DragDrop 

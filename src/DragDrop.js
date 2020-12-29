@@ -12,7 +12,7 @@ const reorder = (list, startIndex, endIndex) => {
     return result;
 };
 
-const grid = 8;
+const grid = 6;
 
 const getItemStyle = (isDragging, draggableStyle) => ({
   // some basic styles to make the items look a bit nicer
@@ -30,7 +30,7 @@ const getItemStyle = (isDragging, draggableStyle) => ({
 const getListStyle = isDraggingOver => ({
   background: isDraggingOver ? "lavender" : "white",
   padding: grid,
-  margin: '25px 0'
+  margin: '0 0 25px 0'
 });
 
 
@@ -40,44 +40,7 @@ export default class DrapDrog extends React.Component {
         this.state = {
           items: []
         }
-        // this.onDragEnd = this.onDragEnd.bind(this);
     }
-
-    // componentDidMount() {
-    //   this.setState({items: this.props.items});
-    // }
-
-//   onBeforeCapture = () => {
-//     /*...*/
-//   };
-
-//   onBeforeDragStart = () => {
-//     /*...*/
-//   };
-
-//   onDragStart = () => {
-//     /*...*/
-//   };
-//   onDragUpdate = () => {
-//     /*...*/
-//   };
-
-    // onDragEnd(result) {
-    //   // dropped outside the list
-    //   if (!result.destination) {
-    //     return;
-    //   }
-
-    //   const items = this.props.reorder(
-    //     this.props.items,
-    //     result.source.index,
-    //     result.destination.index
-    //   );
-      
-    //   console.log("new order:");
-    //   console.log({items});
-    //   this.setState({items});
-    // };
 
   render() {
     let { onDragEnd, submitRanking } = this.props;
@@ -89,7 +52,6 @@ export default class DrapDrog extends React.Component {
                 ref={provided.innerRef} 
                 style={getListStyle(snapshot.isDraggingOver)}
                 {...provided.droppableProps} >
-
             {this.props.items.map((item, index) => (
                 <Draggable key={item.id} draggableId={item.id} index={index}>
                     {(provided, snapshot) => (

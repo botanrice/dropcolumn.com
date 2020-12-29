@@ -50,8 +50,26 @@
     font-weight: bold;
 }
 
+.rankNumber {
+    padding: 10px;
+    margin: 0 0 12px 0;
+}
+
 .epBody {
     margin: 0;
+}
+
+.dragInstrDiv {
+    display: inline-block;
+}
+
+.dragInstruction {
+    font-size: 3vmin;
+    font-style: oblique;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0 1em;
+    display: inline-block;
 }
 
 #coverArtDCEP {
