@@ -33,24 +33,24 @@ import './assets/stylesheets/Home.css';
 // order they would appear in a <Switch>.
 const routes = [
   {
-    path: "/",
+    path: process.env.PUBLIC_URL + "/",
     exact: true,
     main: () => <Home />
   },
   {
-    path: "/gallery",
+    path: process.env.PUBLIC_URL + "/gallery",
     main: () => <Gallery />
   },
   {
-    path: "/about",
+    path: process.env.PUBLIC_URL + "/about",
     main: () => <About />
   },
   {
-    path: "/stoic",
+    path: process.env.PUBLIC_URL + "/stoic",
     main: () => <Stoic />
   },
   {
-    path: "/drop-column",
+    path: process.env.PUBLIC_URL + "/drop-column",
     main: () => <DropColumnEP />
   }
 ];
