@@ -15,7 +15,6 @@ function importAll(r) {
 const images = importAll(require.context('./assets/images', false, /\.(png|jpe?g|JPG)$/));
 
 export default class Gallery extends React.Component {
-
   render() {
     return (
       <div className="gallery">

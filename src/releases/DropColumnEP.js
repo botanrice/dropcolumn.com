@@ -106,7 +106,7 @@ export default class DropColumnEP extends React.Component {
           <Row className="epBody"> 
             <Col xs="2" className="releaseHeader">
               {nums.map((num) => 
-                <div className="rankNumber">{num}</div>
+                <div className="rankNumber" key={num + "-id"}>{num}</div>
               )}
             </Col>
             <Col xs="10" className="releaseHeader">

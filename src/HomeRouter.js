@@ -91,12 +91,13 @@ export default class HomeRouter extends React.Component {
   }
 
   onSetSidebarOpen(open) {
-      this.setState({ sidebarOpen: open });
+    console.log("onSetSidebarOpen");
+    console.log(open);
+    this.setState({ sidebarOpen: open });
   }
 
   render() {
     let isDark = (window.location.href.includes('/drop-column') ? true : false);
-    console.log(isDark);
 
     return(
       <Router>
@@ -113,7 +114,7 @@ export default class HomeRouter extends React.Component {
                 onClick={() => this.onSetSidebarOpen(!this.state.sidebarOpen)}><FaBars /></span>
             </Sidebar>
 
-            <div className="Home-body">
+            <div className="Home-body" onClick={this.state.sidebarOpen ? () => this.onSetSidebarOpen(!this.state.sidebarOpen) : null}>
               <Switch>
                 {routes.map((route, index) => (
                   // Render more <Route>s with the same paths as

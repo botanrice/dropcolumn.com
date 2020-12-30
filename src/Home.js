@@ -7,26 +7,6 @@ import './assets/stylesheets/Home.css';
 
 
 export default class Home extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      sideNavOn: false,
-      sidebarOpen: false
-    }
-
-    this.toggleSideNav = this.toggleSideNav.bind(this);
-    this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
-  }
-
-  toggleSideNav() {
-    this.setState({sideNavOn: !this.state.sideNavOn});
-  }
-
-  onSetSidebarOpen(open) {
-    this.setState({ sidebarOpen: open });
-  }
-
   render() {
     return (
       <div>
