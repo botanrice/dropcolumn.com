@@ -95,11 +95,9 @@ export default class DropColumnEP extends React.Component {
         </Row>
         <Row id="rankDesc" style={{"display": (this.state.submitted ? "none" : "")}}>
           <p id="rankHdr">INSTRUCTIONS</p>
-          <p>listen to the entirety of DROP//COLUMN. <br/> drag & drop to rank your favorite tracks. <br/> press submit at the bottom of the page.</p>
+          <p>listen to the entirety of DROP//COLUMN. <br/> rank your favorite DROP//COLUMN tracks. <br/> press submit at the bottom of the page.</p>
           <div className="dragInstrDiv">
-            <p className="dragInstruction">drag & drop</p>
-            <p className="dragInstruction">drag & drop</p>
-            <p className="dragInstruction">drag & drop</p>
+            <p className="dragInstruction">press & hold to drag & drop</p>
           </div>
         </Row>
         
