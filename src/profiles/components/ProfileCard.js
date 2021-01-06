@@ -50,7 +50,7 @@ export default class ProfileCard extends React.Component {
     }
 
     return (
-      <Card className="profileCard">
+      <Card onClick={this.props.onClick}>
         {card}
       </Card>
     );

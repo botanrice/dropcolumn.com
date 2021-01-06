@@ -31,6 +31,10 @@ export default class SideNav extends React.Component {
           <li>
             <Link to="/drop-column" onClick={this.props.onLinkClick}>DROP//COLUMN</Link>
           </li>
+          <hr/>
+          <li>
+            <Link to="/worldwide" onClick={this.props.onLinkClick}>WORLDWIDE</Link>
+          </li>
         </ul>
 
         <Switch>

@@ -12,10 +12,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import { FaSoundcloud, FaSpotify, FaApple, FaInstagram, FaFacebookSquare, FaFacebookF, FaTwitter, FaYoutube, FaBars } from 'react-icons/fa';
 import Sidebar from 'react-sidebar';
 import SideNav from './SideNav';
+import Worldwide from './Worldwide';
 import Gallery from './Gallery';
 import About from './About';
 import Home from './Home';
 import Stoic from './profiles/Stoic';
+import StoicPoetry from './profiles/stoic/StoicPoetry';
 import DropColumnEP from './releases/DropColumnEP';
 import droplet from './assets/images/LM_droplet_circle.png';
 import column from './assets/images/LM_droplet_column.png';
@@ -38,12 +40,36 @@ const routes = [
     main: () => <Home />
   },
   {
+    path: "/worldwide",
+    main: () => <Worldwide />
+  },
+  {
     path: "/gallery",
     main: () => <Gallery />
   },
   {
     path: "/about",
     main: () => <About />
+  },
+  {
+    path: "/stoic/poetry",
+    main: () => <StoicPoetry />
+  },
+  {
+    path: "/stoic/photography",
+    main: () => <StoicPoetry />
+  },
+  {
+    path: "/stoic/blog",
+    main: () => <StoicPoetry />
+  },
+  {
+    path: "/stoic/sets",
+    main: () => <StoicPoetry />
+  },
+  {
+    path: "/stoic/misc",
+    main: () => <StoicPoetry />
   },
   {
     path: "/stoic",
@@ -73,6 +99,8 @@ const sidebarStyles = {
   }
 }
 
+const darkHeaderPages = ["/drop-column", "/worldwide"]
+
 export default class HomeRouter extends React.Component {
   constructor(props) {
     super(props);
@@ -98,6 +126,10 @@ export default class HomeRouter extends React.Component {
 
   render() {
     let isDark = (window.location.href.includes('/drop-column') ? true : false);
+    let isDarkHeader = false;
+    darkHeaderPages.forEach((page) => {
+      isDarkHeader = (window.location.href.includes(page)) ? true : false;
+    });
 
     return(
       <Router>
@@ -110,7 +142,7 @@ export default class HomeRouter extends React.Component {
               styles={sidebarStyles}
               shadow={false}
             > 
-              <span id={this.state.sidebarOpen ? "nav-btn-open" : "nav-btn"} className={isDark && !this.state.sidebarOpen ? "navButton navBtnInverted" : "navButton"} 
+              <span id={this.state.sidebarOpen ? "nav-btn-open" : "nav-btn"} className={isDarkHeader && !this.state.sidebarOpen ? "navButton navBtnInverted" : "navButton"} 
                 onClick={() => this.onSetSidebarOpen(!this.state.sidebarOpen)}><FaBars /></span>
             </Sidebar>
 
@@ -131,7 +163,7 @@ export default class HomeRouter extends React.Component {
           </Container>
           <footer className="App-footer">
             <Navbar fixed='bottom' className="stickyFooter">
-              <div style={{"display": isDark ? "none" : ""}}>
+              <div style={{"display": isDarkHeader ? "none" : ""}}>
                 <a href="https://soundcloud.com/jones_avenue"><img src={droplet} className="homeProfileButton" alt="dropletButton"/></a>
                 <a href="https://soundcloud.com/stoicdamc"><img src={column} className="homeProfileButton" alt="columnButton"/></a>
               </div>

@@ -3,9 +3,11 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import { Card, CardTitle, CardText, CardImg, CardImgOverlay } from 'reactstrap';
+import { Card, CardTitle, CardText, CardImg, CardImgOverlay, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import {
+  Link
+} from "react-router-dom";
 import { FaSoundcloud, FaSpotify, FaBandcamp, FaInstagram, FaYoutube} from 'react-icons/fa';
-import Zoom from 'react-medium-image-zoom';
 import stoic1 from '../assets/images/DSC_0064.JPG'
 import stoic2 from '../assets/images/DSC_0867.JPG'
 import stoic3 from '../assets/images/DSC_0639(1).jpg'
@@ -14,7 +16,6 @@ import stoicHeadshot from '../assets/images/stoic.png';
 import dcww from '../assets/DCWW.png';
 import dcwwBlk from '../assets/images/DCWW_blkbkg.png';
 import lmBlk from '../assets/LM_black.png';
-import 'react-medium-image-zoom/dist/styles.css'
 import '../assets/stylesheets/Profile.css';
 import ProfileCard from './components/ProfileCard';
 
@@ -37,8 +38,8 @@ const stoicDCWW = (
  *  - ImageCard is 3
  */
 const profileCards = [
-  {"cardType": 1, "bio": {"text": "yo! I'm stoic."}},
-  {"cardType": 1, "bio": {"text": "MORE →"}},
+  {"cardType": 1, "bio": {"text": "i'm stoic."}},
+  {"cardType": 1, "bio": {"text": "MORE OF ME →"}},
   {"cardType": 3, "title": "Founder: Drop Column Worldwide", "image": dcwwBlk},
   {"cardType": 3, "title": "half of lawyer malloy", "image": lmBlk},
 ]
@@ -46,7 +47,26 @@ const profileCards = [
 export default class Stoic extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { };
+    this.state = { 
+      showOverlay: false 
+    }
+  }
+
+  toggleOverlay() {
+    this.setState({showOverlay: !this.state.showOverlay});
+  }
+
+  onClickMoreStoic() {
+    console.log("Click on MORE of stoic");
+    this.setState({showOverlay: !this.state.showOverlay});
+  }
+
+  onClickDCWW() {
+    console.log("Clicked on DCWW");
+  }
+
+  onClickLM() {
+    console.log("Clicked on LM");
   }
 
   render() {
@@ -78,27 +98,31 @@ export default class Stoic extends React.Component {
             </Col>
           </Row>
           <Row xs="1" sm="2" md="2" className="profileRow" id="bottomProfileRow">
-            <Col className="profileCol">
+            <Col className="profileCol" id="bioCardStoic">
               <ProfileCard type={profileCards[0].cardType} content={profileCards[0].bio}/>
             </Col>
-            <Col className="profileCol">
-              <ProfileCard type={profileCards[1].cardType} content={profileCards[1].bio}/>
+            <Col className="profileCol" id="moreCardStoic">
+              <ProfileCard type={profileCards[1].cardType} content={profileCards[1].bio} onClick={() => this.onClickMoreStoic()}/>
             </Col>
-            <Col className="profileCol">
-              <ProfileCard type={profileCards[2].cardType} content={profileCards[2]}/>
+            <Col className="profileCol" id="stoicDCWW">
+              <ProfileCard type={profileCards[2].cardType} content={profileCards[2]} onClick={() => this.onClickDCWW()}/>
             </Col>
-            <Col className="profileCol">
-              <ProfileCard type={profileCards[3].cardType} content={profileCards[3]}/>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <br/>
-              S p a c e r
-              <br/>
+            <Col className="profileCol" id="stoicLM">
+              <ProfileCard type={profileCards[3].cardType} content={profileCards[3]} onClick={() => this.onClickLM()}/>
             </Col>
           </Row>
         </Container>
+        <Modal isOpen={this.state.showOverlay} toggle={() => this.toggleOverlay()} className={"stoicOverlay"}>
+          <ModalHeader id="stoicOverlayHeader" closebutton="false">MORE</ModalHeader>
+          <ModalBody>
+            <Link to="stoic/poetry" className="stoicOverlayButton">poetry</Link>
+            <Link to="stoic/poetry" className="stoicOverlayButton">photography</Link>
+            <Link to="stoic/poetry" className="stoicOverlayButton">blog</Link>
+            <Link to="stoic/poetry" className="stoicOverlayButton">playlists</Link>
+            <Link to="stoic/poetry" className="stoicOverlayButton">mixes</Link>
+            <Link to="stoic/poetry" className="stoicOverlayButton">misc.</Link>
+          </ModalBody>
+        </Modal>
       </div>
     );
   }

@@ -1,0 +1,251 @@
+.worldwide {
+    text-align: unset;
+    font-family: monospace;
+    font-size: calc(9px + 1vmin);
+}
+
+.worldwide h4 {
+    font-variant: small-caps;
+    font-weight: bold;
+    text-align: center;
+    font-size: calc(20px + 1vmin);
+}
+
+.worldwide ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.worldwideHdr {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40vmin;
+    z-index: 999;
+}
+
+.logo {
+    height: 40vmin;
+}
+
+.columnDelim {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.columnBlackSmall {
+    height: 2vh;
+    padding: 0 10px;
+}
+
+.dropletSpacer {
+    width: 100%;
+    text-align: center;
+}
+
+.dropletBlackSmall {
+    height: 2vh;
+    padding: 0 10px;
+}
+
+.worldwideInfo {
+    position: absolute;
+    top: 40vmin;
+    left: 0;
+    padding-bottom: calc(9px + 2rem);
+}
+
+.worldwidePhilosophy {
+    width: 100%;
+    z-index: 0;
+    text-align: justify;
+    padding: 10px 0;
+}
+
+.worldwidePhilosophy ul {
+    padding: 0 35px;
+    text-align: center;
+}
+
+.worldwidePhilosophy li {
+    margin: 10px 0;
+}
+
+.philosophyInfo {
+    padding: 0 30px;
+}
+
+.philosophyPillars {
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.worldwideRoster {
+    width: 100%;
+    z-index: 0;
+}
+
+.worldwideRoster li {
+    padding: 5px;
+    text-decoration: none;
+}
+
+.worldwideRoster a {
+    color: black;
+    text-decoration: none;
+}
+
+.divider {
+    padding: 0 30px;
+}
+
+.divider hr {
+    margin: 0;
+}
+
+/** Specific IDs **/
+#pillars {
+    font-variant: small-caps;
+    font-size: calc(12px + 1vmin);
+    font-weight: bold;
+}
+
+
+/** MEDIA QUERIES *************************************************/
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 568px) { 
+    .columnBlackSmall {
+        height: 4vh;
+        padding: 0 10px;
+    }
+
+    .dropletBlackSmall {
+        height: 3vh;
+        padding: 0 10px;
+    }
+
+    .worldwidePhilosophy {
+        width: 100%;
+        
+        z-index: 0;
+        text-align: justify;
+        padding: 10px 0;
+    }
+    
+    .worldwideRoster {
+        width: 100%;
+        z-index: 0;
+    }
+}
+  
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .columnBlackSmall {
+        height: 2.5vh;
+        padding: 0 10px;
+    }
+    
+    .dropletBlackSmall {
+        height: 2vh;
+        padding: 0 10px;
+    }
+
+    .worldwidePhilosophy ul {
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    .worldwidePhilosophy {
+        width: 100%;
+        z-index: 0;
+        text-align: justify;
+        padding: 10px 0;
+    }
+    
+    .worldwideRoster {
+        width: 100%;
+        z-index: 0;
+    }
+}
+  
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .worldwideHdr {
+        background-color: black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 30vmin;
+        z-index: 999;
+    }
+    
+    .logo {
+        height: 30vmin;
+    }
+
+    .columnBlackSmall {
+        height: 2.5vh;
+        padding: 0 10px;
+    }
+
+    .dropletBlackSmall {
+        height: 2vh;
+        padding: 0 10px;
+    }
+
+    .worldwideInfo {
+        position: absolute;
+        top: 30vmin;
+        left: 0;
+        height: 75%;
+    }
+
+    .worldwidePhilosophy {
+        width: 100%;
+        z-index: 0;
+        text-align: justify;
+        padding: 10px 50px;
+    }
+    
+
+    .worldwidePhilosophy ul {
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    .worldwideRoster {
+        width: 100%;
+        z-index: 0;
+        padding: 20px 30px 50px 30px;
+    }
+}
+  
+/* Extra Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .worldwidePhilosophy {
+        width: 100%;
+        z-index: 0;
+        text-align: justify;
+        padding: 10px 0;
+    }
+
+    .philosophyInfo {
+        padding: 0 120px;
+    }
+    
+    .worldwideRoster {
+        width: 100%;
+        z-index: 0;
+    }
+}
