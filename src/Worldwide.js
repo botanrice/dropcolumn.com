@@ -25,9 +25,6 @@ function Worldwide(props) {
               Each member is certifiably:</p>
             <div className="columnDelim">
               <img src={columnblk} className="columnBlackSmall" alt="column-black" /> 
-              <img src={columnblk} className="columnBlackSmall" alt="column-black" /> 
-              <img src={columnblk} className="columnBlackSmall" alt="column-black" /> 
-              <img src={columnblk} className="columnBlackSmall" alt="column-black" /> 
             </div>
           </div>
           <div className="philosophyPillars">

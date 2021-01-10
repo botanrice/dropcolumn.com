@@ -61,7 +61,6 @@
 
 .dragInstrDiv {
     display: block;
-    text-align: end;
 }
 
 .dragInstruction {
@@ -70,7 +69,7 @@
     font-weight: bold;
     text-decoration: underline;
     margin: 0;
-    padding-left: 4em;
+    padding-bottom: 2em;
     display: inline-block;
 }
 
@@ -141,7 +140,6 @@
         font-weight: bold;
         text-decoration: underline;
         margin: 0;
-        padding-left: 4em;
         display: inline-block;
     }
 }
@@ -165,7 +163,6 @@
         font-weight: bold;
         text-decoration: underline;
         margin: 0;
-        padding-left: 4em;
         display: inline-block;
     }
  }
@@ -189,7 +186,6 @@
         font-weight: bold;
         text-decoration: underline;
         margin: 0;
-        padding-left: 4em;
         display: inline-block;
     }
  }
