@@ -24,12 +24,27 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 40vmin;
+    height: 60vmin;
     z-index: 999;
+    transition: height 0.3s;
 }
 
+.worldwideHdr.smaller {
+    height: 20vmin;
+}
+
+/***** Symbol/Logo Styles *****/
 .logo {
-    height: 40vmin;
+    height: 60vmin;
+    -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.logo.smaller {
+    height: 20vmin;
 }
 
 .columnDelim {
@@ -53,18 +68,52 @@
     height: 2vh;
     padding: 0 10px;
 }
+/***** END: Symbol/Logo *****/
 
 .worldwideInfo {
     position: absolute;
-    top: 40vmin;
+    top: 60vmin;
     left: 0;
     padding-bottom: calc(9px + 2rem);
+}
+
+.worldwideMotto {
+    padding: 10px 10px;
+}
+
+#dcwwTitle {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.worldwideIcons {
+    color: black;
+    font-size: 1.35em;
+    padding: 18px 18px;
+    margin: 5px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    appearance: unset;
+}
+
+#worldwideBio {
+    padding: 20px 0 10px 0;
+}
+
+.worldwideListen {
+    padding: 10px;
+}
+
+.worldwidePlaylist {
+    border: solid 5px black;
+    margin: 20px 0; 
 }
 
 .worldwidePhilosophy {
     width: 100%;
     z-index: 0;
-    text-align: justify;
+    text-align: center;
     padding: 10px 0;
 }
 
@@ -119,8 +168,13 @@
 
 /** MEDIA QUERIES *************************************************/
 
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
+/* Extra small devices (small phones) */
+@media (max-width: 320px) {
+    #dcwwTitle {
+        font-size: 1.45rem;
+        text-align: center;
+    }
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 568px) { 

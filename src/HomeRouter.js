@@ -86,7 +86,8 @@ const sidebarStyles = {
     background: "white",
     fontFamily: "monospace",
     padding: "10px 0",
-    maxWidth: "200px"
+    maxWidth: "200px",
+    position: "fixed"
   },
   overlay: {
     opacity: 0,
@@ -142,7 +143,7 @@ export default class HomeRouter extends React.Component {
               styles={sidebarStyles}
               shadow={false}
             > 
-              <span id={this.state.sidebarOpen ? "nav-btn-open" : "nav-btn"} className={isDarkHeader && !this.state.sidebarOpen ? "navButton navBtnInverted" : "navButton"} 
+              <span id={this.state.sidebarOpen ? "nav-btn-open" : "nav-btn"} className={(isDark || isDarkHeader) && !this.state.sidebarOpen ? "navButton navBtnInverted" : "navButton"} 
                 onClick={() => this.onSetSidebarOpen(!this.state.sidebarOpen)}><FaBars /></span>
             </Sidebar>
 

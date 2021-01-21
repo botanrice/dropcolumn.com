@@ -31,6 +31,14 @@ function ImageCard(props) {
   );
 }
 
+function MoreCard(props) {
+  return(
+    <div className="moreCard">
+      <CardText>{props.content.text}</CardText>
+    </div>
+  )
+}
+
 export default class ProfileCard extends React.Component {
   render() {
     const cardType = this.props.type;
@@ -44,6 +52,9 @@ export default class ProfileCard extends React.Component {
         break;
       case 3:
         card = <ImageCard title={this.props.content.title} image={this.props.content.image}/>
+        break;
+      case 4:
+        card = <MoreCard content={this.props.content}/>
         break;
       default:
         card = <span>whoops! there was an error.</span>
