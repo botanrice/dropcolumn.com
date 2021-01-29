@@ -1,5 +1,11 @@
 import React, { useEffect } from 'react';
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import Image from 'react-bootstrap/Image';
+import { Link } from "react-router-dom";
 import { FaSoundcloud, FaSpotify, FaApple, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { SiAudiomack } from "react-icons/si";
 import logo from './assets/LM_black.png';
@@ -20,16 +26,16 @@ function Worldwide(props) {
 
   function resizeHeaderOnScroll() {
     const distanceY = window.pageYOffset || document.documentElement.scrollTop,
-      shrinkOn = 100,
+      shrinkOn = 30,
       headerElement = document.getElementsByClassName("worldwideHdr")[0],
       logoElement = document.getElementsByClassName("logo")[0];
-
+  
     if (distanceY > shrinkOn) {
-      headerElement.classList.add("smaller");
-      logoElement.classList.add("smaller");
+      if(headerElement != null) headerElement.classList.add("smaller");
+      if(headerElement != null) logoElement.classList.add("smaller");
     } else {
-      headerElement.classList.remove("smaller");
-      logoElement.classList.remove("smaller");
+      if(headerElement != null) headerElement.classList.remove("smaller");
+      if(headerElement != null) logoElement.classList.remove("smaller");
     }
   }
 
@@ -77,21 +83,11 @@ function Worldwide(props) {
             <h4>philosophy</h4>
             <p>Drop Column Worldwide exists to bring together a group of artists who share a passion for breaking from the norm.<br/><br/>
               Operating on a foundation of these four  <span id="pillars">pillars</span>, each of these individuals matches our core values.
-              They are:</p>
-            <div className="divider">
-              <hr/>
-            </div>
-          </div>
-          <div className="philosophyPillars">
-            <ul>
-              <li>geniune in their passion to create</li>
-              <div className="dropletSpacer"><img src={dropletblk} className="dropletBlackSmall" alt="column-black" /></div>
-              <li>unique in their pursuit of improving as artists</li>
-              <div className="dropletSpacer"><img src={dropletblk} className="dropletBlackSmall" alt="column-black" /></div>
-              <li>open-minded in their perception of all disciplines and skill levels</li>
-              <div className="dropletSpacer"><img src={dropletblk} className="dropletBlackSmall" alt="column-black" /></div>
-              <li>self-critical and reflective of themselves</li>
-            </ul>
+              </p>
+            <div className="dropletSpacer"><img src={dropletblk} className="dropletBlackSmall" alt="droplet-black" /></div>
+            <p>They are genuine in their passion to create.</p>
+            <p>They are unique in their pursuit of that passion. They strive to create something that is like nothing that has eever existed.</p>
+            <p>They are open-minded in their perception of others, with respect to personal beliefs, skill levels, and discipline.</p>
           </div>
           <div className="columnDelim">
               <img src={columnblk} className="columnBlackSmall" alt="column-black" /> 
@@ -102,12 +98,88 @@ function Worldwide(props) {
         </div>
         <div className="worldwideRoster">
           <h4>roster</h4>
-          <ul>
-            <li><a href="/stoic">stoic da poet</a></li>
-            <li><a href="/stoic">jones avenue</a></li>
-            <li><a href="/stoic">beagle // LEND</a></li>
-            <li><a href="/stoic">whxt</a></li>
-          </ul>
+          <Container className="rosterTable">
+            <Row>
+              <Col>
+                <Link to="/stoic">
+                  <div className="rosterPicCrop">
+                    <Image src="http://assets.dropcolumn.com/stoic.png" fluid roundedCircle className="rosterPic" />
+                  </div>
+                  <span>stoic da poet</span>
+                </Link>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Link to="/jones">
+                  <div className="rosterPicCrop">
+                    <Image src="https://assets.dropcolumn.com/profiles/jones.png" fluid roundedCircle className="rosterPic" />
+                  </div>
+                  <span>jones avenue</span>
+                </Link>
+              </Col>
+              <Col>
+                <Link to="/beagle">
+                  <div className="rosterPicCrop">
+                    <Image src="http://assets.dropcolumn.com/profiles/beagle.png" fluid roundedCircle className="rosterPic" />
+                  </div>
+                  <span>beagle</span>
+                </Link>
+              </Col>
+              <Col>
+                <Link to="/whet">
+                  <div className="rosterPicCrop">
+                    <Image src="http://assets.dropcolumn.com/profiles/whet.png" fluid roundedCircle className="rosterPic" />
+                  </div>
+                  <span>whet</span>
+                </Link>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Link to="/occlude">
+                  <div className="rosterPicCrop">
+                    <Image src="http://assets.dropcolumn.com/profiles/occlude.png" fluid roundedCircle className="rosterPic" />
+                  </div>
+                  <span>Occlude</span>
+                </Link>
+              </Col>
+              <Col>
+                <Link to="/whale">
+                  <div className="rosterPicCrop">
+                    <Image src="http://assets.dropcolumn.com/profiles/whale.png" fluid roundedCircle className="rosterPic" />
+                  </div>
+                  <span>Whale</span>
+                </Link>
+              </Col>
+              <Col>
+                <Link to="/osiris">
+                  <div className="rosterPicCrop">
+                    <Image src="http://assets.dropcolumn.com/profiles/osiris.png" fluid roundedCircle className="rosterPic" />
+                  </div>
+                  <span>KingOsiris</span>
+                </Link>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Link to="/maurice">
+                  <div className="rosterPicCrop">
+                    <Image src="http://assets.dropcolumn.com/profiles/maurice.png" fluid roundedCircle className="rosterPic" />
+                  </div>
+                  <span>Strong Maurice</span>
+                </Link>
+              </Col>
+              <Col>
+                <Link to="/benjo">
+                  <div className="rosterPicCrop">
+                    <Image src="http://assets.dropcolumn.com/profiles/benjo.png" fluid roundedCircle className="rosterPic" />
+                  </div>
+                  <span>Benjo</span>
+                </Link>
+              </Col>
+            </Row>
+          </Container>
         </div>
       </div>
     </div>

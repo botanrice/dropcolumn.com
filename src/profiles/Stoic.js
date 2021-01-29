@@ -71,7 +71,7 @@ export default class Stoic extends React.Component {
           <Row>
             <Col>
               <div className="proPicCrop">
-                <Image src={stoicHeadshot} fluid className="proPic" />
+                <Image src="https://assets.dropcolumn.com/stoic.png" fluid className="proPic" />
               </div>
             </Col>
           </Row>
@@ -105,7 +105,7 @@ export default class Stoic extends React.Component {
               </Card>
               <Link to="/worldwide" className="linkCard">
                 <Card className="profileCard">
-                  <Card.Img variant="top" src={dcwwBlk} />
+                  <Card.Img variant="top" src="https://assets.dropcolumn.com/DCWW_blkbkg.png" />
                   <Card.Body className="imageCardText">
                     <Card.Title as="h5">Founder: Drop Column Worldwide</Card.Title>
                   </Card.Body>
@@ -113,7 +113,7 @@ export default class Stoic extends React.Component {
               </Link>
               <Link to="/" className="linkCard">
                 <Card className="profileCard">
-                  <Card.Img id="imageCardLM" variant="top" src={lmBlk} />
+                  <Card.Img id="imageCardLM" variant="top" src="https://assets.dropcolumn.com/LM_black.png" />
                   <Card.Body className="imageCardText">
                     <Card.Title as="h5">Half of lawyer malloy</Card.Title>
                   </Card.Body>

@@ -18,6 +18,14 @@ import About from './About';
 import Home from './Home';
 import Stoic from './profiles/Stoic';
 import StoicPoetry from './profiles/stoic/StoicPoetry';
+import Jones from './profiles/Jones';
+import Beagle from './profiles/Beagle';
+import Whet from './profiles/Whet';
+import Occlude from './profiles/Occlude';
+import Whale from './profiles/Whale';
+import Osiris from './profiles/Osiris';
+import Maurice from './profiles/Maurice';
+import Benjo from './profiles/Benjo';
 import DropColumnEP from './releases/DropColumnEP';
 import droplet from './assets/images/LM_droplet_circle.png';
 import column from './assets/images/LM_droplet_column.png';
@@ -74,6 +82,38 @@ const routes = [
   {
     path: "/stoic",
     main: () => <Stoic />
+  },
+  {
+    path: "/jones",
+    main: () => <Jones />
+  },
+  {
+    path: "/beagle",
+    main: () => <Beagle />
+  },
+  {
+    path: "/whet",
+    main: () => <Whet />
+  },
+  {
+    path: "/occlude",
+    main: () => <Occlude />
+  },
+  {
+    path: "/whale",
+    main: () => <Whale />
+  },
+  {
+    path: "/osiris",
+    main: () => <Osiris />
+  },
+  {
+    path: "/maurice",
+    main: () => <Maurice />
+  },
+  {
+    path: "/benjo",
+    main: () => <Benjo />
   },
   {
     path: "/drop-column",

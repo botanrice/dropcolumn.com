@@ -8,6 +8,11 @@
     padding-right: 15px;
 }
 
+.profileMember {
+    text-align: unset;
+    font-family: monospace; 
+}
+
 
 .profileBody {
     text-align: unset;
