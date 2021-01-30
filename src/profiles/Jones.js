@@ -36,10 +36,10 @@ function Jones(props) {
 
     return (
       <div className="profileMember" id="stoicdapoet">
-        <Container>
+        <Container fluid>
           <Row>
             <Col>
-              <Image src={dcww} fluid id="dcwwLogo" />
+              <Image src="https://assets.dropcolumn.com/DCWW.png" fluid id="dcwwLogo" />
             </Col>
           </Row>
           <Row>
@@ -58,7 +58,7 @@ function Jones(props) {
           <Row>
             <Col>
               <CardDeck className="profileCardDeck">
-                <Card className="profileCard" id="profileCardTop">
+                <Card className="memberProfileCard">
                   <Card.Body>
                     <Card.Title as="h5">jones avenue</Card.Title>
                     <Card.Text>

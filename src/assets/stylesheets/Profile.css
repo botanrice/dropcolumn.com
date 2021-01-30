@@ -4,8 +4,8 @@
     /* height: 100vh; */
     padding-top: 1vh;
     margin-bottom: 100px;
-    padding-left: 15px;
-    padding-right: 15px;
+    /* padding-left: 15px; */
+    /* padding-right: 15px; */
 }
 
 .profileMember {
@@ -104,12 +104,13 @@
 /* 1/10/21 */
 
 .profileCardDeck {
-    padding: 0 5vh;
+    /* padding: 0 5vh; */
+    margin-bottom: 100px;
 }
 
 /* Profile Card (Generic) */
 .profileCard {
-    min-width: 18rem;
+    /* min-width: 18rem; */
     margin-bottom: 15px;
     font-size: calc(8px + 1vmin);
 }
@@ -117,6 +118,19 @@
 .profileCard h5 {
     font-size: 0.9rem;
     margin-bottom: 0;
+    text-decoration: none;
+}
+
+.memberProfileCard {
+    margin-bottom: 15px;
+    font-size: calc(8px + 1vmin);
+    text-decoration: none;
+    color: black;
+}
+
+.memberProfileCard :hover {
+    text-decoration: none;
+    color: black;
 }
 
 .buttonCard {
@@ -138,6 +152,7 @@
 /* Image Card */
 .imageCardText {
     padding: 1rem 0.75rem;
+    text-decoration: none;
 }
 
 #imageCardLM {
@@ -172,6 +187,11 @@
     text-decoration: none;
 }
 
+.stoicModal {
+    font-family: monospace;
+}
+
+
 
 /** MEDIA QUERIES *************************************************/
 
@@ -181,13 +201,25 @@
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 568px) { 
     .profileCard {
-        min-width: 18rem;
+        /* min-width: 18rem; */
         margin-bottom: 15px;
     }
 
     #profileCardTop {
-        min-width: 18rem;
+        /* min-width: 18rem; */
         margin-bottom: 15px;
+        text-decoration: none;
+        color: black;
+    }
+
+    #profileCardTop :hover {
+        text-decoration: none;
+        color: black;
+    }
+
+    .memberProfileCard {
+        display: block;
+        margin: auto;
     }
 }
 
@@ -198,6 +230,25 @@
         height: 30vh;
     }
 
+    #profileCardTop {
+        /* min-width: 15rem; */
+        margin-bottom: 15px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .profileCard {
+        /* min-width: 15rem; */
+        margin-bottom: 15px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .memberProfileCard {
+        width: 20vw;
+        display: block;
+        margin: auto;
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -220,9 +271,35 @@
         height: 35vh;
     }
 
-    /* .bottomProfileRow {
-    } */
+    #profileCardTop {
+        min-width: 0;
+        margin-bottom: 15px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .profileCard {
+        min-width: 0;
+        margin-bottom: 15px;
+        text-decoration: none;
+        color: black;
+    }
+    
  }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  }
+@media (min-width: 1200px) { 
+    #profileCardTop {
+        min-width: 0;
+        margin-bottom: 15px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .profileCard {
+        min-width: 0;
+        margin-bottom: 15px;
+        text-decoration: none;
+        color: black;
+    }
+ }

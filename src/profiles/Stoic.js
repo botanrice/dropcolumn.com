@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -34,61 +34,53 @@ const profileCards = [
   {"cardType": 3, "title": "Half of lawyer malloy", "image": lmBlk},
 ]
 
-export default class Stoic extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { 
-      showOverlay: false 
-    }
-  }
+function Stoic(props) {
+  const [show, setShow] = useState(false);
 
-  toggleOverlay() {
-    this.setState({showOverlay: !this.state.showOverlay});
-  }
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
-  onClickMoreStoic() {
-    console.log("Click on MORE of stoic");
-    this.setState({showOverlay: !this.state.showOverlay});
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = { 
+  //     showOverlay: false 
+  //   }
+  // }
 
-  onClickDCWW() {
-    console.log("Clicked on DCWW");
-  }
+  // onClickMoreStoic() {
+  //   console.log("Click on MORE of stoic");
+  //   this.setState({showOverlay: !this.state.showOverlay});
+  // }
 
-  onClickLM() {
-    console.log("Clicked on LM");
-  }
-
-  render() {
-    return (
-      <div className="profile" id="stoicdapoet">
-        <Container>
-          <Row>
-            <Col>
-              <Image src={dcww} fluid id="dcwwLogo" />
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <div className="proPicCrop">
-                <Image src="https://assets.dropcolumn.com/stoic.png" fluid className="proPic" />
-              </div>
-            </Col>
-          </Row>
-          <Row className="linkRow">
-            <Col>
-              <a href="https://stoicdapoet.bandcamp.com/" className="socialButton" type="button" 
-                rel="noopener noreferrer" target="_blank"><FaBandcamp /></a>
-              <a href="https://soundcloud.com/stoicdamc" id="soundcloudBtn" className="socialButton" 
-                type="button" rel="noopener noreferrer" target="_blank"><FaSoundcloud /></a>
-              <a href="https://www.instagram.com/stoicdapoet/" id="instagramBtn" className="socialButton" 
-                type="button" rel="noopener noreferrer" target="_blank"><FaInstagram /></a>
-              <a href="https://www.youtube.com/channel/UCjaJlV1R7JJqRK6RXn2-_QQ?view_as=subscriber" id="youtubeBtn"
-                className="socialButton" type="button" rel="noopener noreferrer" target="_blank"><FaYoutube /></a>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
+  return (
+    <div className="profile" id="stoicdapoet">
+      <Container>
+        <Row>
+          <Col>
+            <Image src="https://assets.dropcolumn.com/DCWW.png" fluid id="dcwwLogo" />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <div className="proPicCrop">
+              <Image src="https://assets.dropcolumn.com/stoic.png" fluid className="proPic" />
+            </div>
+          </Col>
+        </Row>
+        <Row className="linkRow">
+          <Col>
+            <a href="https://stoicdapoet.bandcamp.com/" className="socialButton" type="button" 
+              rel="noopener noreferrer" target="_blank"><FaBandcamp /></a>
+            <a href="https://soundcloud.com/stoicdamc" id="soundcloudBtn" className="socialButton" 
+              type="button" rel="noopener noreferrer" target="_blank"><FaSoundcloud /></a>
+            <a href="https://www.instagram.com/stoicdapoet/" id="instagramBtn" className="socialButton" 
+              type="button" rel="noopener noreferrer" target="_blank"><FaInstagram /></a>
+            <a href="https://www.youtube.com/channel/UCjaJlV1R7JJqRK6RXn2-_QQ?view_as=subscriber" id="youtubeBtn"
+              className="socialButton" type="button" rel="noopener noreferrer" target="_blank"><FaYoutube /></a>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
             <CardDeck className="profileCardDeck">
               <Card className="profileCard" id="profileCardTop">
                 <Card.Body>
@@ -98,47 +90,40 @@ export default class Stoic extends React.Component {
                   </Card.Text>
                 </Card.Body>
               </Card>
-              <Card className="profileCard buttonCard" id="profileCardTop" onClick={() => this.onClickMoreStoic()}>
+              <Card className="profileCard buttonCard" id="profileCardTop" onClick={handleShow}>
                 <Card.Body>
                   <Card.Title as="h5">MORE OF ME</Card.Title>
                 </Card.Body>
               </Card>
-              <Link to="/worldwide" className="linkCard">
-                <Card className="profileCard">
-                  <Card.Img variant="top" src="https://assets.dropcolumn.com/DCWW_blkbkg.png" />
+              <Card className="profileCardTop profileCard">
+                <Link to="/worldwide" className="linkCard" >
+                  <Card.Img variant="top" className="imageCardImage" src="https://assets.dropcolumn.com/DCWW_blkbkg.png" />
                   <Card.Body className="imageCardText">
                     <Card.Title as="h5">Founder: Drop Column Worldwide</Card.Title>
                   </Card.Body>
-                </Card>
-              </Link>
-              <Link to="/" className="linkCard">
-                <Card className="profileCard">
-                  <Card.Img id="imageCardLM" variant="top" src="https://assets.dropcolumn.com/LM_black.png" />
+                </Link>
+              </Card>
+              <Card className="profileCard imageCard" id="profileCardTop" >
+                <Link to="/" className="linkCard">
+                  <Card.Img id="imageCardLM" className="imageCardImage" variant="top" src="https://assets.dropcolumn.com/LM_black.png" />
                   <Card.Body className="imageCardText">
                     <Card.Title as="h5">Half of lawyer malloy</Card.Title>
                   </Card.Body>
-                </Card>
-              </Link>
+                </Link>
+              </Card>
             </CardDeck>
-            </Col>  
-          </Row>
-        </Container>
+          </Col>
+        </Row>
+      </Container>
 
-        <Modal show={this.state.showOverlay} onHide={() => this.onClickMoreStoic()} centered>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={() => this.onClickMoreStoic()}>
-              Close
-            </Button>
-            <Button variant="primary" onClick={() => this.onClickMoreStoic()}>
-              Save Changes
-            </Button>
-          </Modal.Footer>
-        </Modal>
-      </div>
-    );
-  }
+      <Modal show={show} onHide={handleClose} centered className="stoicModal">
+        <Modal.Header closeButton>
+          <Modal.Title>MORE OF ME</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Poetry, photography, philosophy, playlists & more... coming soon.</Modal.Body>
+      </Modal>
+    </div>
+  );
 }
+
+export default Stoic;
