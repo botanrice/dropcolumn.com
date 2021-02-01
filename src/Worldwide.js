@@ -48,19 +48,15 @@ function Worldwide(props) {
         <div className="worldwideMotto">
           <h1 id="dcwwTitle">DROP COLUMN WORLDWIDE</h1>
           <div>
-            <a href="https://open.spotify.com/album/40oMUoQur6QnXebzBx2Okb?si=pagNWNzYQ_qKO83YHA8IMA" className="worldwideIcons" type="button" 
-              rel="noopener noreferrer" target="_blank"><FaSpotify /></a>
-            <a href="https://soundcloud.com/lawyermalloy/sets/dropcolumn" className="worldwideIcons" 
+            <a href="https://soundcloud.com/dropcolumnworldwide" className="worldwideIcons" 
               type="button" rel="noopener noreferrer" target="_blank"><FaSoundcloud /></a>
-            <a href="https://music.apple.com/us/album/drop-column-ep/1545428593" className="worldwideIcons" type="button" 
-              rel="noopener noreferrer" target="_blank"><FaApple /></a>
-            <a href="https://audiomack.com/lawyer-malloy/album/dropcolumn" className="worldwideIcons" type="button" 
-              rel="noopener noreferrer" target="_blank"><SiAudiomack /></a>
+            <a href="https://www.instagram.com/stoicdapoet/" id="instagramBtn" className="socialButton" 
+              type="button" rel="noopener noreferrer" target="_blank"><FaInstagram /></a>
           </div>
           <div id="worldwideBio">
             global hip-hop imprint.<br/>
-            expression sees no boundaries.<br/>
-            building pillars.<br/>
+            culture sees no boundaries.<br/>
+            building through pillars.<br/>
           </div>
         </div>
         <div className="divider">
@@ -82,7 +78,7 @@ function Worldwide(props) {
           <div className="philosophyInfo">
             <h4>philosophy</h4>
             <p>Drop Column Worldwide exists to bring together a group of artists who share a passion for breaking from the norm.<br/><br/>
-              Operating on a foundation of these four  <span id="pillars">pillars</span>, each of these individuals matches our core values.
+              Operating on a foundation of these three  <span id="pillars">pillars</span>, each of these individuals matches our core values.
               </p>
             <div className="dropletSpacer"><img src={dropletblk} className="dropletBlackSmall" alt="droplet-black" /></div>
             <p>They are genuine in their passion to create.</p>
