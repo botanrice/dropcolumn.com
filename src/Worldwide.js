@@ -50,7 +50,7 @@ function Worldwide(props) {
           <div>
             <a href="https://soundcloud.com/dropcolumnworldwide" className="worldwideIcons" 
               type="button" rel="noopener noreferrer" target="_blank"><FaSoundcloud /></a>
-            <a href="https://www.instagram.com/stoicdapoet/" id="instagramBtn" className="socialButton" 
+            <a href="https://www.instagram.com/dropcolumnworldwide/" id="instagramBtn" className="socialButton" 
               type="button" rel="noopener noreferrer" target="_blank"><FaInstagram /></a>
           </div>
           <div id="worldwideBio">
