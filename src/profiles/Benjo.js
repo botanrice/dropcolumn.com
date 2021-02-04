@@ -60,7 +60,7 @@ function Benjo(props) {
               <CardDeck className="profileCardDeck">
                 <Card className="profileCard" id="profileCardTop">
                   <Card.Body>
-                    <Card.Title as="h5">Benjo</Card.Title>
+                    <Card.Title as="h4" className="memberProfileCardTitle">Benjo</Card.Title>
                     <Card.Text>
                       experimental hip-hop producer & world creator
                     </Card.Text>

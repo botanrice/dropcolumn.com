@@ -162,6 +162,11 @@
 .rosterPic {
     margin: auto;
     height: 15vh;
+    transition: height 0.1s linear;
+}
+
+.rosterPicCrop :hover {
+    height: 16vh;
 }
 
 .divider {

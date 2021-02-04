@@ -133,6 +133,10 @@
     color: black;
 }
 
+.memberProfileCardTitle {
+    font-weight: bold;
+}
+
 .buttonCard {
     box-shadow: 5px 5px 0px 0px #8E8D8D;
 }

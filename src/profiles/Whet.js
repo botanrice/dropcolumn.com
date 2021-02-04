@@ -62,7 +62,7 @@ function Whet(props) {
               <CardDeck className="profileCardDeck">
                 <Card className="profileCard" id="profileCardTop">
                   <Card.Body>
-                    <Card.Title as="h5">whet</Card.Title>
+                    <Card.Title as="h4" className="memberProfileCardTitle">whet</Card.Title>
                     <Card.Text>
                       abyss-pop
                     </Card.Text>

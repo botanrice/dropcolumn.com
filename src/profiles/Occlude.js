@@ -62,7 +62,7 @@ function Occlude(props) {
               <CardDeck className="profileCardDeck">
                 <Card className="profileCard" id="profileCardTop">
                   <Card.Body>
-                    <Card.Title as="h5">occlude</Card.Title>
+                    <Card.Title as="h4" className="memberProfileCardTitle">Occlude</Card.Title>
                     <Card.Text>
                       crafting cinematic experiences through pop and storytelling
                     </Card.Text>

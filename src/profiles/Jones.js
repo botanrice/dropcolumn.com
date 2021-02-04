@@ -60,7 +60,7 @@ function Jones(props) {
               <CardDeck className="profileCardDeck">
                 <Card className="memberProfileCard">
                   <Card.Body>
-                    <Card.Title as="h5">jones avenue</Card.Title>
+                    <Card.Title as="h4" className="memberProfileCardTitle">jones avenue</Card.Title>
                     <Card.Text>
                       electronic trap hip-hop
                     </Card.Text>

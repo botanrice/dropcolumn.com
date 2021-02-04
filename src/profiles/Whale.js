@@ -62,7 +62,7 @@ function Whale(props) {
               <CardDeck className="profileCardDeck">
                 <Card className="profileCard" id="profileCardTop">
                   <Card.Body>
-                    <Card.Title as="h5">whale</Card.Title>
+                    <Card.Title as="h4" className="memberProfileCardTitle">whale</Card.Title>
                     <Card.Text>
                       experimental bass psychopath/808 abuser
                     </Card.Text>

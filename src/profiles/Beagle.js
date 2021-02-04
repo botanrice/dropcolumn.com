@@ -62,7 +62,7 @@ function Beagle(props) {
               <CardDeck className="profileCardDeck">
                 <Card className="profileCard" id="profileCardTop">
                   <Card.Body>
-                    <Card.Title as="h5">beagle</Card.Title>
+                    <Card.Title as="h4" className="memberProfileCardTitle">beagle</Card.Title>
                     <Card.Text>
                       raw & grimey drill from the streets of Bristol, England
                     </Card.Text>

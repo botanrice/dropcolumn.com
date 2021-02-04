@@ -62,7 +62,7 @@ function Maurice(props) {
               <CardDeck className="profileCardDeck">
                 <Card className="profileCard" id="profileCardTop">
                   <Card.Body>
-                    <Card.Title as="h5">Strong Maurice</Card.Title>
+                    <Card.Title as="h4" className="memberProfileCardTitle">Strong Maurice</Card.Title>
                     <Card.Text>
                       creator of LOHYPE music
                     </Card.Text>

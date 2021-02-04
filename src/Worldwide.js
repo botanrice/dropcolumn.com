@@ -174,6 +174,14 @@ function Worldwide(props) {
                   <span>Benjo</span>
                 </Link>
               </Col>
+              <Col>
+                <Link to="/carbrey" className="rosterIcon">
+                  <div className="rosterPicCrop">
+                    <Image src="http://assets.dropcolumn.com/profiles/carbrey.png" fluid roundedCircle className="rosterPic" />
+                  </div>
+                  <span>Carbrey</span>
+                </Link>
+              </Col>
             </Row>
           </Container>
         </div>

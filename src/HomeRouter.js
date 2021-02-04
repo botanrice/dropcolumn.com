@@ -26,6 +26,7 @@ import Whale from './profiles/Whale';
 import Osiris from './profiles/Osiris';
 import Maurice from './profiles/Maurice';
 import Benjo from './profiles/Benjo';
+import Carbrey from "./profiles/Carbrey";
 import DropColumnEP from './releases/DropColumnEP';
 import droplet from './assets/images/LM_droplet_circle.png';
 import column from './assets/images/LM_droplet_column.png';
@@ -114,6 +115,10 @@ const routes = [
   {
     path: "/benjo",
     main: () => <Benjo />
+  },
+  {
+    path: "/carbrey",
+    main: () => <Carbrey />
   },
   {
     path: "/drop-column",

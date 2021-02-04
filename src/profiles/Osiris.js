@@ -62,7 +62,7 @@ function Osiris(props) {
               <CardDeck className="profileCardDeck">
                 <Card className="profileCard" id="profileCardTop">
                   <Card.Body>
-                    <Card.Title as="h5">KingOsiris</Card.Title>
+                    <Card.Title as="h4" className="memberProfileCardTitle">KingOsiris</Card.Title>
                     <Card.Text>
                       Canadian Lyricist on his grind
                     </Card.Text>
