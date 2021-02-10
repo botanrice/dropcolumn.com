@@ -8,7 +8,7 @@
     font-variant: small-caps;
     font-weight: bold;
     text-align: center;
-    font-size: calc(20px + 1vmin);
+    font-size: calc(30px + 1vmin);
 }
 
 .worldwide ul {
@@ -143,6 +143,7 @@
 .worldwideRoster {
     width: 100%;
     z-index: 0;
+    margin-bottom: 5rem;
 }
 
 .worldwideRoster li {
@@ -153,6 +154,16 @@
 .worldwideRoster a {
     color: black;
     text-decoration: none;
+}
+
+.worldwideRoster h5 {
+    margin: 15px 0;
+    font-variant: small-caps;
+    /* font-size: calc(15px + 1vmin); */
+}
+
+#worldwideRosterArtistsHdr {
+    margin: 25px 0;
 }
 
 .rosterPicCrop {

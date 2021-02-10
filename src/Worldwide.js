@@ -54,9 +54,9 @@ function Worldwide(props) {
               type="button" rel="noopener noreferrer" target="_blank"><FaInstagram /></a>
           </div>
           <div id="worldwideBio">
-            global hip-hop imprint.<br/>
-            culture sees no boundaries.<br/>
-            building through pillars.<br/>
+            our foundation is of stone.<br/>
+            our form is of water.<br/>
+            global creative imprint.<br/>
           </div>
         </div>
         <div className="divider">
@@ -77,13 +77,13 @@ function Worldwide(props) {
         <div className="worldwidePhilosophy">
           <div className="philosophyInfo">
             <h4>philosophy</h4>
-            <p>Drop Column Worldwide exists to bring together a group of artists who share a passion for breaking from the norm.<br/><br/>
+            <p>Our mission is to remain fluid, like water, in the pursuit of our creations while remaining solid, like stone, in the principles that guide us.<br/><br/>
               Operating on a foundation of these three  <span id="pillars">pillars</span>, each of these individuals matches our core values.
               </p>
             <div className="dropletSpacer"><img src={dropletblk} className="dropletBlackSmall" alt="droplet-black" /></div>
             <p>They are genuine in their passion to create.</p>
-            <p>They are unique in their pursuit of that passion. They strive to create something that is like nothing that has eever existed.</p>
-            <p>They are open-minded in their perception of others, with respect to personal beliefs, skill levels, and discipline.</p>
+            <p>They are unique in their pursuit of that passion. They strive to create something that is like nothing that has ever existed.</p>
+            <p>They are open-minded in their perception of others, with respect to personal beliefs, skill levels, and disciplines.</p>
           </div>
           <div className="columnDelim">
               <img src={columnblk} className="columnBlackSmall" alt="column-black" /> 
@@ -97,6 +97,7 @@ function Worldwide(props) {
           <Container className="rosterTable">
             <Row>
               <Col>
+                <h5>FOUNDER</h5>
                 <Link to="/stoic">
                   <div className="rosterPicCrop">
                     <Image src="http://assets.dropcolumn.com/stoic.png" fluid roundedCircle className="rosterPic" />
@@ -105,6 +106,7 @@ function Worldwide(props) {
                 </Link>
               </Col>
             </Row>
+            <h5 id="worldwideRosterArtistsHdr">ARTISTS</h5>
             <Row>
               <Col>
                 <Link to="/jones">
@@ -180,6 +182,16 @@ function Worldwide(props) {
                     <Image src="http://assets.dropcolumn.com/profiles/carbrey.png" fluid roundedCircle className="rosterPic" />
                   </div>
                   <span>Carbrey</span>
+                </Link>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Link to="/morice" className="rosterIcon">
+                  <div className="rosterPicCrop">
+                    <Image src="http://assets.dropcolumn.com/profiles/morice.png" fluid roundedCircle className="rosterPic" />
+                  </div>
+                  <span>Mo.Rice</span>
                 </Link>
               </Col>
             </Row>
