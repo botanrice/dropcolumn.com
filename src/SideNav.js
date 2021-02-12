@@ -35,6 +35,9 @@ export default class SideNav extends React.Component {
           <li>
             <Link to="/worldwide" onClick={this.props.onLinkClick}>WORLDWIDE</Link>
           </li>
+          <li>
+            <Link to="/chapter-synopsis" id="chapterSynopsisNav" onClick={this.props.onLinkClick}>chapter||synopsis</Link>
+          </li>
         </ul>
 
         <Switch>

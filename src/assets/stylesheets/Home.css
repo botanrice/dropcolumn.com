@@ -188,6 +188,10 @@
   text-decoration: none;
 }
 
+#chapterSynopsisNav {
+  font-size: calc(10px + 0.5vmin);
+}
+
 
 
 .side-nav-on {

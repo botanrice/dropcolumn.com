@@ -29,6 +29,7 @@ import Benjo from './profiles/Benjo';
 import Carbrey from "./profiles/Carbrey";
 import Morice from './profiles/Morice';
 import DropColumnEP from './releases/DropColumnEP';
+import ChapterSynopsis from './releases/ChapterSynopsis';
 import droplet from './assets/images/LM_droplet_circle.png';
 import column from './assets/images/LM_droplet_column.png';
 import './assets/stylesheets/Home.css';
@@ -128,6 +129,10 @@ const routes = [
   {
     path: "/drop-column",
     main: () => <DropColumnEP />
+  },
+  {
+    path: "/chapter-synopsis",
+    main: () => <ChapterSynopsis />
   }
 ];
 
@@ -150,7 +155,7 @@ const sidebarStyles = {
   }
 }
 
-const darkHeaderPages = ["/drop-column", "/worldwide"]
+const darkHeaderPages = ["/drop-column", "/worldwide", "/chapter-synopsis"]
 
 export default class HomeRouter extends React.Component {
   constructor(props) {
@@ -176,10 +181,11 @@ export default class HomeRouter extends React.Component {
   }
 
   render() {
-    let isDark = (window.location.href.includes('/drop-column') ? true : false);
+    let isDark = false;
     let isDarkHeader = false;
     darkHeaderPages.forEach((page) => {
       isDarkHeader = (window.location.href.includes(page)) ? true : false;
+      isDark = (window.location.href.includes(page)) ? true : false;
     });
 
     return(
