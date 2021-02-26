@@ -28,15 +28,15 @@ export default class SideNav extends React.Component {
           <li>
             <Link to="/about" onClick={this.props.onLinkClick}>about</Link>
           </li>
-          <li>
-            <Link to="/drop-column" onClick={this.props.onLinkClick}>DROP//COLUMN</Link>
-          </li>
           <hr/>
           <li>
             <Link to="/worldwide" onClick={this.props.onLinkClick}>WORLDWIDE</Link>
           </li>
           <li>
             <Link to="/chapter-synopsis" id="chapterSynopsisNav" onClick={this.props.onLinkClick}>chapter||synopsis</Link>
+          </li>
+          <li>
+            <Link to="/greenones" id="chapterSynopsisNav" onClick={this.props.onLinkClick}>green ones</Link>
           </li>
         </ul>
 

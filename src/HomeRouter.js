@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+import {withRouter} from 'react-router-dom';
+import { useLocation } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -35,6 +37,7 @@ import column from './assets/images/LM_droplet_column.png';
 import './assets/stylesheets/Home.css';
 import Otoroshi from "./profiles/Otoroshi";
 import Madmax from "./profiles/Madmax";
+import GreenOnes from "./releases/GreenOnes";
 
 
 // Each logical "route" has two components, one for
@@ -143,6 +146,10 @@ const routes = [
   {
     path: "/chapter-synopsis",
     main: () => <ChapterSynopsis />
+  },
+  {
+    path: "/greenones",
+    main: () => <GreenOnes />
   }
 ];
 
@@ -165,82 +172,64 @@ const sidebarStyles = {
   }
 }
 
-const darkHeaderPages = ["/drop-column", "/worldwide", "/chapter-synopsis"]
+const darkHeaderPages = ["/drop-column", "/worldwide", "/chapter-synopsis", "/greenones"]
+const darkBodyPages = ["/drop-column", "/chapter-synopsis", "/greenones"]
 
-export default class HomeRouter extends React.Component {
-  constructor(props) {
-    super(props);
+function HomeRouter() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
-    this.state = {
-        sideNavOn: false,
-        sidebarOpen: false
-    }
+  let loc = useLocation();
+  let isDarkHeader = darkHeaderPages.includes("/" + window.location.href.split("/")[3]) ? true : false;
+  let isDark = darkBodyPages.includes("/" + window.location.href.split("/")[3]) ? true : false;
+  
+  console.log(window.location.href.split("/")[3]);
+  console.log(isDark);
+  console.log(isDarkHeader);
 
-    this.closeSidebar = this.closeSidebar.bind(this);
-    this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
-  }
+  return(
+    <Router>
+      <div className={isDark ? "Home-dark" : "Home"}>
+        <Container className="App-body">
+          <Sidebar
+            sidebar={<SideNav routes={routes} onLinkClick={() => setSidebarOpen(false)}/>}
+            open={sidebarOpen}
+            onSetOpen={setSidebarOpen}
+            styles={sidebarStyles}
+            shadow={false}
+          > 
+            <span id={sidebarOpen ? "nav-btn-open" : "nav-btn"} className={(isDarkHeader) && !sidebarOpen ? "navButton navBtnInverted" : "navButton"} 
+              onClick={() => setSidebarOpen(!sidebarOpen)}><FaBars /></span>
+          </Sidebar>
 
-  closeSidebar() {
-      this.setState({sidebarOpen: false});
-  }
-
-  onSetSidebarOpen(open) {
-    console.log("onSetSidebarOpen");
-    console.log(open);
-    this.setState({ sidebarOpen: open });
-  }
-
-  render() {
-    let isDark = false;
-    let isDarkHeader = false;
-    darkHeaderPages.forEach((page) => {
-      isDarkHeader = (window.location.href.includes(page)) ? true : false;
-      isDark = (window.location.href.includes(page)) ? true : false;
-    });
-
-    return(
-      <Router>
-        <div className={isDark ? "Home-dark" : "Home"}>
-          <Container className="App-body">
-            <Sidebar
-              sidebar={<SideNav routes={routes} onLinkClick={this.closeSidebar}/>}
-              open={this.state.sidebarOpen}
-              onSetOpen={this.onSetSidebarOpen}
-              styles={sidebarStyles}
-              shadow={false}
-            > 
-              <span id={this.state.sidebarOpen ? "nav-btn-open" : "nav-btn"} className={(isDark || isDarkHeader) && !this.state.sidebarOpen ? "navButton navBtnInverted" : "navButton"} 
-                onClick={() => this.onSetSidebarOpen(!this.state.sidebarOpen)}><FaBars /></span>
-            </Sidebar>
-
-            <div className="Home-body" onClick={this.state.sidebarOpen ? () => this.onSetSidebarOpen(!this.state.sidebarOpen) : null}>
-              <Switch>
-                {routes.map((route, index) => (
-                  // Render more <Route>s with the same paths as
-                  // above, but different components this time.
-                  <Route
-                    key={index}
-                    path={process.env.PUBLIC_URL + route.path}
-                    exact={route.exact}
-                    children={<route.main />}
-                  />
-                ))}
-              </Switch>
+          <div className="Home-body" onClick={sidebarOpen ? () => setSidebarOpen(!sidebarOpen) : null}>
+            <Switch>
+              {routes.map((route, index) => (
+                // Render more <Route>s with the same paths as
+                // above, but different components this time.
+                <Route
+                  key={index}
+                  path={process.env.PUBLIC_URL + route.path}
+                  exact={route.exact}
+                  children={<route.main />}
+                />
+              ))}
+            </Switch>
+          </div>
+        </Container>
+        <footer className="App-footer">
+          <Navbar fixed='bottom' className="stickyFooter">
+            <div style={{"display": isDark ? "none" : ""}}>
+              <a href="https://soundcloud.com/jones_avenue"><img src={droplet} className="homeProfileButton" alt="dropletButton"/></a>
+              <a href="https://soundcloud.com/stoicdamc"><img src={column} className="homeProfileButton" alt="columnButton"/></a>
             </div>
-          </Container>
-          <footer className="App-footer">
-            <Navbar fixed='bottom' className="stickyFooter">
-              <div style={{"display": isDarkHeader ? "none" : ""}}>
-                <a href="https://soundcloud.com/jones_avenue"><img src={droplet} className="homeProfileButton" alt="dropletButton"/></a>
-                <a href="https://soundcloud.com/stoicdamc"><img src={column} className="homeProfileButton" alt="columnButton"/></a>
-              </div>
-              <div>
-                <span>Drop Column Worldwide | Est. 2020</span>
-              </div>
-            </Navbar>
-          </footer>
-        </div>
-      </Router>
-    );
-  }
+            <div>
+              <span>Drop Column Worldwide | Est. 2020</span>
+            </div>
+          </Navbar>
+        </footer>
+      </div>
+    </Router>
+  );
 }
+
+export default withRouter(HomeRouter);

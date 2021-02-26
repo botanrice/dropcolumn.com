@@ -10,20 +10,20 @@ import { SiAudiomack } from "react-icons/si";
 import '../assets/stylesheets/releases/Release.css';
 
 
-function ChapterSynopsis(props) {
+function GreenOnes(props) {
     return (
       <Container className="dropcolumnEP">
         <Row>
           <Col className="releaseHeader">
-            <Image src="https://assets.dropcolumn.com/releases/chaptersynopsiscover.png" className="coverArt" fluid />
+            <Image src="https://assets.dropcolumn.com/releases/greenones_art.png" className="coverArt" fluid />
           </Col>
         </Row>
         <Row>
           <Col className="releaseInfo releaseHeader" >
-            <h3 id="releaseTitle">chapter||synopsis</h3>
-            <span className="releaseBio">2||12||21</span>
+            <h3 id="releaseTitle">green ones</h3>
+            <span className="releaseBio">2||26||21</span>
             <div className="releaseLinks">
-              <a href="https://soundcloud.com/dropcolumnworldwide/sets/chapter-synopsis" id="soundcloudBtn" className="streamButton" 
+              <a href="https://soundcloud.com/dropcolumnworldwide/sets/beagle-x-lawyer-malloy-green-ones" id="soundcloudBtn" className="streamButton" 
                 type="button" rel="noopener noreferrer" target="_blank"><FaSoundcloud /></a>
             </div>
           </Col>
@@ -31,9 +31,9 @@ function ChapterSynopsis(props) {
         <Row>
           <Col>
             <ReactPlayer
-              url={"https://soundcloud.com/dropcolumnworldwide/sets/chapter-synopsis"}
+              url={"https://soundcloud.com/dropcolumnworldwide/sets/beagle-x-lawyer-malloy-green-ones"}
               width="auto"
-              height="70vh"
+              height="50vh"
               className="releaseEmbed"
             />
           </Col>
@@ -42,4 +42,4 @@ function ChapterSynopsis(props) {
     );
 }
 
-export default withRouter(ChapterSynopsis);
+export default withRouter(GreenOnes);

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import {withRouter} from 'react-router-dom';
 import ReactPlayer from 'react-player';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -218,4 +219,4 @@ function Worldwide(props) {
   );
 }
 
-export default Worldwide;
+export default withRouter(Worldwide);
