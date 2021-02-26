@@ -23,7 +23,7 @@ function GreenOnes(props) {
             <h3 id="releaseTitle">green ones</h3>
             <span className="releaseBio">2||26||21</span>
             <div className="releaseLinks">
-              <a href="https://soundcloud.com/dropcolumnworldwide/sets/beagle-x-lawyer-malloy-green-ones" id="soundcloudBtn" className="streamButton" 
+              <a href="https://soundcloud.com/dropcolumnworldwide/sets/greenones" id="soundcloudBtn" className="streamButton" 
                 type="button" rel="noopener noreferrer" target="_blank"><FaSoundcloud /></a>
             </div>
           </Col>
@@ -31,7 +31,7 @@ function GreenOnes(props) {
         <Row>
           <Col>
             <ReactPlayer
-              url={"https://soundcloud.com/dropcolumnworldwide/sets/beagle-x-lawyer-malloy-green-ones"}
+              url={"https://soundcloud.com/dropcolumnworldwide/sets/greenones"}
               width="auto"
               height="50vh"
               className="releaseEmbed"
