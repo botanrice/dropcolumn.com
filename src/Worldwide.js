@@ -185,13 +185,29 @@ function Worldwide(props) {
                 </Link>
               </Col>
             </Row>
-            <Row>
+            <Row id="lastProfileRow">
               <Col>
                 <Link to="/morice" className="rosterIcon">
                   <div className="rosterPicCrop">
                     <Image src="http://assets.dropcolumn.com/profiles/morice.png" fluid roundedCircle className="rosterPic" />
                   </div>
                   <span>Mo.Rice</span>
+                </Link>
+              </Col>
+              <Col>
+                <Link to="/otoroshi" className="rosterIcon">
+                  <div className="rosterPicCrop">
+                    <Image src="http://assets.dropcolumn.com/profiles/otoroshi.jpg" fluid roundedCircle className="rosterPic" />
+                  </div>
+                  <span>Otoroshi</span>
+                </Link>
+              </Col>
+              <Col>
+                <Link to="/madmax" className="rosterIcon">
+                  <div className="rosterPicCrop">
+                    <Image src="http://assets.dropcolumn.com/profiles/madmax.jpg" fluid roundedCircle className="rosterPic" />
+                  </div>
+                  <span>mädmäx</span>
                 </Link>
               </Col>
             </Row>

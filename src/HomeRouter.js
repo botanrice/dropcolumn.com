@@ -33,6 +33,8 @@ import ChapterSynopsis from './releases/ChapterSynopsis';
 import droplet from './assets/images/LM_droplet_circle.png';
 import column from './assets/images/LM_droplet_column.png';
 import './assets/stylesheets/Home.css';
+import Otoroshi from "./profiles/Otoroshi";
+import Madmax from "./profiles/Madmax";
 
 
 // Each logical "route" has two components, one for
@@ -125,6 +127,14 @@ const routes = [
   {
     path: "/morice",
     main: () => <Morice />
+  },
+  {
+    path: "/otoroshi",
+    main: () => <Otoroshi />
+  },
+  {
+    path: "/madmax",
+    main: () => <Madmax />
   },
   {
     path: "/drop-column",
