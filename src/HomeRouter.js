@@ -18,6 +18,7 @@ import Worldwide from './Worldwide';
 import Gallery from './Gallery';
 import About from './About';
 import Home from './Home';
+import Home22 from './Home22';
 import Stoic from './profiles/Stoic';
 import StoicPoetry from './profiles/stoic/StoicPoetry';
 import Jones from './profiles/Jones';
@@ -53,7 +54,7 @@ const routes = [
   {
     path: "/",
     exact: true,
-    main: () => <Home />
+    main: () => <Home22 />
   },
   {
     path: "/worldwide",
@@ -188,7 +189,7 @@ function HomeRouter() {
 
   return(
     <Router>
-      <div className={isDark ? "Home-dark" : "Home"}>
+      <div className={isDark ? "Home-dark" : "Home22"}>
         <Container className="App-body">
           <Sidebar
             sidebar={<SideNav routes={routes} onLinkClick={() => setSidebarOpen(false)}/>}
