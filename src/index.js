@@ -4,9 +4,11 @@ import { BrowserRouter as Router } from "react-router-dom";
 import './index.css';
 import OriginalHome from './HomeSimple';      // Can render this for old, simple web page with no sidebar
 import HomeRouter from './HomeRouter';
+import Home22 from './Home22';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Router><HomeRouter /></Router>, document.getElementById('root'));
+// ReactDOM.render(<Router><HomeRouter /></Router>, document.getElementById('root'));
+ReactDOM.render(<Home22/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
