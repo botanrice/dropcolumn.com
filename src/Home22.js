@@ -13,9 +13,9 @@ export default class Home22 extends React.Component {
             <img src={logo} className="logo" alt="logo" /> 
             <div className="icons">
               <div className="icons">
-                <a href="https://soundcloud.com/lawyermalloy" id="soundcloudBtn" className="socialButton" 
+                <a href="https://soundcloud.com/dropcolumnworldwide" id="soundcloudBtn" className="socialButton" 
                   type="button" rel="noopener noreferrer" target="_blank"><FaSoundcloud /></a>
-                <a href="https://www.instagram.com/stoicandjones/" id="instagramBtn" className="socialButton" 
+                <a href="https://www.instagram.com/dropcolumnworldwide/" id="instagramBtn" className="socialButton" 
                   type="button" rel="noopener noreferrer" target="_blank"><FaInstagram /></a>
                 {/* <a href="https://open.spotify.com/artist/1iSnXRVWAUPaPgDYZXjNc7" className="socialButton" type="button" 
                   rel="noopener noreferrer" target="_blank"><FaSpotify /></a> */}
