@@ -65,12 +65,12 @@
 }
 
 .socialButton {
-  background-color: white;
-  color: black;
+  color: white;
+  /* background-color: white; */
   border: none;
-  border-radius: 25px;
-  padding: 15px 18px;
-  font-size: 1.25em;
+  border-radius: 30px;
+  padding: 25px 18px;
+  font-size: 2em;
   cursor: pointer;
   appearance: unset;
 }

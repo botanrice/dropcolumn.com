@@ -5,6 +5,7 @@ import './index.css';
 import OriginalHome from './HomeSimple';      // Can render this for old, simple web page with no sidebar
 import HomeRouter from './HomeRouter';
 import Home22 from './Home22';
+import Home from './Home';
 import * as serviceWorker from './serviceWorker';
 
 // ReactDOM.render(<Router><HomeRouter /></Router>, document.getElementById('root'));
