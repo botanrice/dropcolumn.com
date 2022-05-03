@@ -54,6 +54,7 @@
 .App-footer {
   margin: 5px;
   font-family: monospace;
+  font-size: small;
 }
 
 .stickyFooter {
@@ -69,8 +70,8 @@
   /* background-color: white; */
   border: none;
   border-radius: 30px;
-  padding: 25px 18px;
-  font-size: 2em;
+  padding: 50px;
+  font-size: 3.5em;
   cursor: pointer;
   appearance: unset;
 }
