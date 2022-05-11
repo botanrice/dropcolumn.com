@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
   Link
 } from "react-router-dom";
-import {withRouter} from 'react-router-dom';
 import { useLocation } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -203,7 +201,7 @@ function HomeRouter() {
           </Sidebar>
 
           <div className="Home-body" onClick={sidebarOpen ? () => setSidebarOpen(!sidebarOpen) : null}>
-            <Switch>
+            {/* <Switch>
               {routes.map((route, index) => (
                 // Render more <Route>s with the same paths as
                 // above, but different components this time.
@@ -214,7 +212,8 @@ function HomeRouter() {
                   children={<route.main />}
                 />
               ))}
-            </Switch>
+            </Switch> */}
+            <span>under construction</span>
           </div>
         </Container>
         <footer className="App-footer">
@@ -233,4 +232,4 @@ function HomeRouter() {
   );
 }
 
-export default withRouter(HomeRouter);
+export default HomeRouter;

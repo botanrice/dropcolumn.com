@@ -1,5 +1,4 @@
 import React from 'react';
-import {withRouter} from 'react-router-dom';
 import ReactPlayer from 'react-player'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -42,4 +41,4 @@ function ChapterSynopsis(props) {
     );
 }
 
-export default withRouter(ChapterSynopsis);
+export default ChapterSynopsis;

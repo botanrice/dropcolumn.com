@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
   Link
 } from "react-router-dom";
@@ -40,7 +39,7 @@ export default class SideNav extends React.Component {
           </li>
         </ul>
 
-        <Switch>
+        {/* <Switch>
             {routes.map((route, index) => (
               // You can render a <Route> in as many places
               // as you want in your app. It will render along
@@ -55,7 +54,7 @@ export default class SideNav extends React.Component {
                 exact={route.exact}
               />
             ))}
-          </Switch>
+          </Switch> */}
       </div>
     );
   }
