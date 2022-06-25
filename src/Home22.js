@@ -24,6 +24,7 @@ export default class Home22 extends React.Component {
         </div>
         <footer className="App-footer">
           <span>Background art by Roman Bratschi</span>
+          <p style={{fontSize: '8px'}}>bo rice • pppatsfan96@gmail.com</p>
         </footer>
       </div>
     );
