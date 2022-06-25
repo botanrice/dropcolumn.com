@@ -19,6 +19,7 @@ import Stoic from './routes/Stoic';
 import Jones from './routes/Jones';
 import StoicJoint from './releases/StoicJoint';
 import Secret from './routes/Secret';
+import Artists from './routes/Artists';
 
 // ReactDOM.render(<Router><HomeRouter /></Router>, document.getElementById('root'));
 // ReactDOM.render(<Home22 />, document.getElementById('root'));
@@ -62,6 +63,7 @@ root.render(
     <Routes>
       <Route path="/" element={<Home22 />} />
       <Route path="/secret" element={<Secret />} />
+      <Route path="/us" element={<Artists />} />
       <Route path="*" element={<Home22 />}/>
     </Routes>
   </BrowserRouter>

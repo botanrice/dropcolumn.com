@@ -8,8 +8,9 @@ const SecretDiv = styled.div`
   color: black;
   margin: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
 `;
 
 const StyledLink = styled.a`
@@ -108,10 +109,10 @@ const SecretFlexDiv = styled(SecretDiv)`
 `;
 
 const ProfileButton = styled.div.attrs((props) => ({ 
-  topMargin: Math.round(Math.random() * 200),
-  bottomMargin: Math.round(Math.random() * 200),
-  leftMargin: Math.round(Math.random() * 500),
-  rightMargin: Math.round(Math.random() * 500),
+  topMargin: Math.round(Math.random() * 20),
+  bottomMargin: Math.round(Math.random() * 20),
+  leftMargin: Math.round(Math.random() * 50),
+  rightMargin: Math.round(Math.random() * 50),
 }))`
   border: 3px solid black;
   border-radius: 50px;
