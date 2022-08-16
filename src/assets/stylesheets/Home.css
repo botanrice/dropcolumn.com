@@ -33,6 +33,43 @@
   background-size: cover;
 }
 
+.releaseContainer {
+  position: absolute;
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  font-family: monospace;
+  font-size: smaller;
+  background: url("../images/tectonic/tec_bkgdark.jpg") no-repeat center center fixed; 
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  min-height: calc(100vh - 104px);
+}
+
+.releaseCover {
+  height: 50vmin;
+  border-radius: 5px;
+}
+
+#Stoic {
+  position: absolute;
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  font-family: monospace;
+  font-size: smaller;
+  /* background: url("../images/tectonic/tec_bkgdark.jpg") no-repeat center center fixed; */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  min-height: 100vh;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
 
 /* Pre '22 Revamp */
 

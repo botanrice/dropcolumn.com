@@ -18,13 +18,12 @@ export default class Home22 extends React.Component {
                 <a href="https://www.instagram.com/dropcolumnworldwide/" id="instagramBtn" className="socialButton" 
                   type="button" rel="noopener noreferrer" target="_blank"><FaInstagram /></a>
               </div>
-              <span>More soon...</span>
             </div>
           </div>
         </div>
         <footer className="App-footer">
           <span>Background art by <a href="https://www.behance.net/roman_bratschi">Roman Bratschi</a></span>
-          <p style={{fontSize: '8px'}}>bo rice • pppatsfan96@gmail.com</p>
+          <p style={{fontSize: '8px', visibility: 'hidden'}}>bo rice • pppatsfan96@gmail.com</p>
         </footer>
       </div>
     );

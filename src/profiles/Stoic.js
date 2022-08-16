@@ -34,7 +34,7 @@ const profileCards = [
   {"cardType": 3, "title": "Half of lawyer malloy", "image": lmBlk},
 ]
 
-function Stoic(props) {
+function Stoic20(props) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -126,4 +126,4 @@ function Stoic(props) {
   );
 }
 
-export default Stoic;
+export default Stoic20;

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import {
   BrowserRouter,
   Routes,
@@ -20,6 +20,7 @@ import Jones from './routes/Jones';
 import StoicJoint from './releases/StoicJoint';
 import Secret from './routes/Secret';
 import Artists from './routes/Artists';
+import TecGrooves from './routes/TecGrooves';
 
 // ReactDOM.render(<Router><HomeRouter /></Router>, document.getElementById('root'));
 // ReactDOM.render(<Home22 />, document.getElementById('root'));
@@ -64,6 +65,8 @@ root.render(
       <Route path="/" element={<Home22 />} />
       <Route path="/secret" element={<Secret />} />
       <Route path="/us" element={<Artists />} />
+      <Route path="/stoic" element={<Stoic />} />
+      <Route path="/tectonic" element={<TecGrooves />} />
       <Route path="*" element={<Home22 />}/>
     </Routes>
   </BrowserRouter>
