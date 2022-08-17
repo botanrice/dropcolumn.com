@@ -5,6 +5,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import ReactGA from 'react-ga';
 import './index.css';
 // Import all Home files 
 import OriginalHome from './HomeSimple';      // Can render this for old, simple web page with no sidebar
@@ -22,8 +23,8 @@ import Secret from './routes/Secret';
 import Artists from './routes/Artists';
 import TecGrooves from './routes/TecGrooves';
 
-// ReactDOM.render(<Router><HomeRouter /></Router>, document.getElementById('root'));
-// ReactDOM.render(<Home22 />, document.getElementById('root'));
+/* Initialize Google Analytics */
+ReactGA.initialize('UA-000000-01');
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")

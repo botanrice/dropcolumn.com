@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import '../assets/stylesheets/Home.css';
 import { Outlet } from "react-router-dom";
 import ReactPlayer from 'react-player/lazy'
+import ReactGA from 'react-ga';
 import tec from '../assets/images/tectonic/tecgrooves.png';
 import soundcloud from '../assets/images/platforms/soundcloud.png';
 import spotify from '../assets/images/platforms/spotify.svg';
@@ -12,6 +13,7 @@ import pandora from '../assets/images/platforms/pandora.svg';
 import amazon from '../assets/images/platforms/amazon.png';
 import deezer from '../assets/images/platforms/deezer.svg';
 
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const ReleaseContainer = styled.div`
   font-family: monospace;
