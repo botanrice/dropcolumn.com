@@ -33,8 +33,31 @@ const ReleaseInfoContainer = styled.div`
   border-radius: 5px;
   flex-direction: column;
   justify-content: center;
-  width: 385px;
+  width: 315px;
   display: block;
+
+  /* Extra small devices (phones, less than 768px) */
+  /* No media query since this is the default in Bootstrap */
+
+  /* Small devices (landscape phones, 576px and up) */
+  @media(min-width: 576px) { 
+    width: 305px;
+  }
+
+  /* Medium devices (tablets, 768px and up) */
+  @media(min-width: 768px) {
+    width: 385px;
+  }
+
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) { 
+    width: 455px;
+  }
+
+  /* Extra Large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) { 
+    width: 455px;
+  }
 `;
 
 const ArtistTitleContainer = styled.div`
@@ -103,7 +126,7 @@ const PlatformPlayLink = styled.a`
 
 const EnterSite = styled.a`
   color: white;
-  background-color: #9484ac;
+  background-color: #382a2f;
   cursor: pointer;
   border: none;
   padding: 6px 12px;
@@ -167,14 +190,14 @@ export default function TecGrooves() {
   // const playButtonColor = "#9484ac";
   return (
     <div className="releaseContainer">
-      <ReleaseContainer>
+      <ReleaseContainer className="ReleaseContainer" >
         <img src={tec} className="releaseCover" alt="tectonic" /> 
-        <ReleaseInfoContainer>
-          <ArtistTitleContainer>
+        <ReleaseInfoContainer className="ReleaseInfoContainer" >
+          <ArtistTitleContainer className="ArtistTitleContainer" >
             <ReleaseTitle>Tectonic Grooves <br/> & <br/> Parkway Aspirations</ReleaseTitle>
             <ReleaseArtist>stoic da poet</ReleaseArtist>
           </ArtistTitleContainer>
-          <PlatformContainer>
+          <PlatformContainer className="PlatformContainer" >
             {platforms.map((platform) => (
               <PlatformLink key={platform.title}>
                 <PlatformTitle>
