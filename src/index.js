@@ -24,7 +24,7 @@ import Artists from './routes/Artists';
 import TecGrooves from './routes/TecGrooves';
 
 /* Initialize Google Analytics */
-ReactGA.initialize('UA-000000-01');
+ReactGA.initialize('G-RHYB1ME0CK');
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")

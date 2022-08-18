@@ -3,6 +3,7 @@ import '../assets/stylesheets/Home.css';
 import { Link, Outlet } from "react-router-dom";
 import stoic from '../assets/images/tectonic/stoic_funky.png';
 import dcww from '../assets/images/dropcolumnworldwide3.png';
+import tec from '../assets/images/tectonic/tecgrooves.png';
 
 const StoicPicContainer = styled.div`
   width: 40vmin;
@@ -57,12 +58,20 @@ const EnterButton = styled.a`
   display: flex;
   width: 7vmin;
   height: 7vmin;
+  min-height: 5em;
+  min-width: 5em;
   text-align: center;
+  justify-content: center;
 
   &:hover {
     color: white;
     text-decoration: none;
   }
+`;
+
+const StoicImg = styled.img`
+  min-height: 3em;
+  min-width: 3em;
 `;
 
 export default function Stoic() {
@@ -84,10 +93,13 @@ export default function Stoic() {
       </StoicBioContainer>
       <EnterLinks>
         <EnterButton href="https://dropcolumn.com/">
-          <img src={dcww} alt="DCWW" />
+          <StoicImg src={dcww} alt="DCWW" />
+        </EnterButton>
+        <EnterButton href="https://dropcolumn.com/tectonic">
+          <StoicImg src={tec} alt="Tectonic" />
         </EnterButton>
         <EnterButton href="https://beacons.ai/stoicdapoet">
-          <img src={stoic} alt="stoic" />
+          <StoicImg src={stoic} alt="stoic" />
         </EnterButton>
       </EnterLinks>
       <Outlet />

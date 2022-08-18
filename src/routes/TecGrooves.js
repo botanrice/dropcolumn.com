@@ -15,6 +15,11 @@ import deezer from '../assets/images/platforms/deezer.svg';
 
 ReactGA.pageview(window.location.pathname + window.location.search);
 
+ReactGA.event({
+  category: 'User',
+  action: 'Clicked a link'
+});
+
 const ReleaseContainer = styled.div`
   font-family: monospace;
   color: black;
@@ -74,6 +79,7 @@ const ReleaseTitle = styled.h1`
   font-size: 1.5rem;
   background-color: black;
   width: fit-content;
+  display: inline-block;
 `;
 
 const ReleaseArtist = styled.h3`
@@ -114,7 +120,7 @@ const PlatformPlay = styled.div`
   text-align: right;
 `;
 
-const PlatformPlayLink = styled.a`
+const PlatformPlayLink = styled.ReactGA.OutboundLink`
   color: #999;
   text-transform: uppercase;
   font-size: 11px;
@@ -128,7 +134,7 @@ const PlatformPlayLink = styled.a`
 
 const EnterSite = styled.a`
   color: white;
-  background-color: #382a2f;
+  background-color: #758bc4;
   cursor: pointer;
   border: none;
   padding: 6px 12px;
@@ -203,12 +209,24 @@ export default function TecGrooves() {
             {platforms.map((platform) => (
               <PlatformLink key={platform.title}>
                 <PlatformTitle>
-                  <a href={platform.link} alt={platform.title} target="_blank" rel="noreferrer">
+                  <PlatformPlayLink  
+                    eventLabel="platformClick"
+                    to={platform.link} 
+                    alt={platform.title} 
+                    target="_blank" 
+                    rel="noreferrer"
+                  >
                     <PlatformTitleImg src={platform.img} alt={platform.title} />
-                  </a>
+                  </PlatformPlayLink>
                 </PlatformTitle>
                 <PlatformPlay>
-                  <PlatformPlayLink href={platform.link} target="_blank">Play</PlatformPlayLink>
+                  <PlatformPlayLink 
+                    eventLabel="platformClick"
+                    href={platform.link} 
+                    target="_blank"
+                  >
+                    Play
+                  </PlatformPlayLink>
                 </PlatformPlay>
               </PlatformLink>
             ))}
