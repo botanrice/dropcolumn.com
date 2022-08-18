@@ -120,7 +120,7 @@ const PlatformPlay = styled.div`
   text-align: right;
 `;
 
-const PlatformPlayLink = styled.ReactGA.OutboundLink`
+const PlatformPlayLink = styled(ReactGA.OutboundLink)`
   color: #999;
   text-transform: uppercase;
   font-size: 11px;
